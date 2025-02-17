@@ -5,7 +5,7 @@ const featuresData: Feature[] = [
     id: 1,
     icon: "/images/icon/icon-01.svg",
     title: "Automatic Cleaning and Preprocessing",
-    description: "Save time, stay Correct.",
+    description: "Save time, maximize usage, and stay correct.",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const featuresData: Feature[] = [
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Catalogue Data for Future Predictive Modeling",
+    title: "Catalogue Data for Future Predictions",
     description:
       "Give you a leg up in predictive tasks via structured categorization.",
   },
@@ -25,13 +25,13 @@ const featuresData: Feature[] = [
     icon: "/images/icon/icon-04.svg",
     title: "Reliability Guarantees for Data Representation",
     description:
-      "Data decisions have impacts - our metrics evaluate the trustworthiness of your data's ability to address your end goal.",
+      "Decisions have impacts - our metrics ensure a trustworthy data journey.",
   },
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
     title: "Interactive RAG Interface",
-    description: "Converse with your data.",
+    description: "Converse with your data and effortlessly uncover insights.",
   },
   {
     id: 6,
