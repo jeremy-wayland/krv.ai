@@ -30,15 +30,14 @@ const featuresData: Feature[] = [
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
-    title: "Interactive RAG Interface",
-    description: "Converse with your data and effortlessly uncover insights.",
+    title: "Proprietary Graph Algorithms",
+    description: "Uncover hidden structures with topological insights.",
   },
   {
     id: 6,
     icon: "/images/icon/icon-06.svg",
-    title: "Visualization Suite and Report Generation",
-    description:
-      "Seeing is believing, communicate effectively through visualizations.",
+    title: "Bias Detection and Benchmarking",
+    description: "Ensure your results are representative and reliable.",
   },
 ];
 

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+// import Mover from "@/images/about/moveTest";
+import Mover from "../Hero/data_to_insight-animation";
 
 const About = () => {
   return (
@@ -34,6 +36,7 @@ const About = () => {
                 className="dark:hidden"
                 fill
               />
+
               <Image
                 src="/images/about/about-dark-01.svg"
                 alt="About"
@@ -66,16 +69,17 @@ const About = () => {
                 Our Secret Sauce
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Dynamic Processing via {"   "}
+                Lightweight Graph-Based {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  Reliability Metrics
+                  Model Intelligence
                 </span>
               </h2>
               <p>
-                Krv Analytics empowers businesses to harness the power of their
-                data. Our solutions simplify high-dimensional, sparse datasets,
-                enabling domain experts to see into the black box of machine
-                learning.
+                KKrv Analytics transforms all your business data—from chats and
+                emails to transactions and reports—into an intelligent Cosmic
+                Graph. Our system deciphers advanced population dynamics,
+                empowering users to unlock actionable insights from complex
+                datasets.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -86,13 +90,12 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Sensitivity Analysis for Preprocessing
+                    Better Data = Smarter Models
                   </h3>
                   <p>
-                    Reliability metrics reveal how changes in data preprocessing
-                    impact machine learning outcomes. By quantifying
-                    sensitivity, they help users identify preprocessing choices
-                    that lead to consistent, trustworthy results.
+                    We refine text structure, generate high-quality training
+                    data, and benchmark model performance to improve accuracy,
+                    transparency, and reduce bias.
                   </p>
                 </div>
               </div>
@@ -104,14 +107,12 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Ensuring Robust Decision-Making
+                    Intelligent AI Agents
                   </h3>
                   <p>
-                    With reliability metrics, businesses can assess whether
-                    their data can reliably answer critical questions. If ML
-                    results drastically change due to preprocessing, these
-                    metrics guide users toward identifying the most dependable
-                    configurations.
+                    Our AI-powered agents analyze data, provide recommendations,
+                    and automate tasks with a custom-built semantic framework
+                    for reliable decision-making.
                   </p>
                 </div>
               </div>
@@ -147,16 +148,23 @@ const About = () => {
                 Stear Clear Of
               </h4>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Analysis {"   "}
+                Data {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Paralysis
+                  Overload
                 </span>
               </h2>
               <p>
-                Beyond graph advantages — like uncovering hidden patterns,
-                enabling non-technical insights, and making data searchable — we
-                keep pace with new methods while shielding users from choice
-                overload.
+                Traditional tools drown you in information without making sense
+                of it. Our tools doesn’t just surface patterns—they understand
+                relationships, trends, and context, turning raw data into clear,
+                actionable insights.
+              </p>
+              <br />
+              <p>
+                Gone are the days of trying to solve a massive puzzle with
+                thousands of scattered pieces. Instead of guessing where they
+                fit, we assemble the big picture for you—so you see the whole
+                story instantly. overload.
               </p>
               <div>
                 <a
