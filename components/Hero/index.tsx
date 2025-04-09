@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import Mover from "./data_to_insight-animation";
+import MoverLight from "./animation-light";
+import MoverDark from "./animation-dark";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -83,14 +84,17 @@ const Hero = () => {
                 /> */}
 
                 <div className="h-full w-full dark:hidden">
-                  <Mover />
+                  <MoverLight />
                 </div>
-                <Image
+                <div className="hidden shadow-solid-l dark:block">
+                  <MoverDark />
+                </div>
+                {/* <Image
                   className="hidden shadow-solid-l dark:block"
                   src="/images/hero/hero-dark.svg"
                   alt="Hero"
                   fill
-                />
+                /> */}
               </div>
             </div>
           </div>

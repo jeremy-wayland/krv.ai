@@ -7,9 +7,20 @@ const COLORS = {
   PROCESS: "#136F64",
   AI: "#FF4617",
   OUTPUT: "#FFC400",
-  EDGE: "rgba(156, 156, 156, 0.3)",
+  EDGE: "rgba(57, 57, 57, 0.3)",
   BG_NODE: "rgba(94, 94, 94, 0.3)",
-  BG_EDGE: "#e0e0e0",
+  BG_EDGE: "rgba(94, 94, 94, 0.3)",
+};
+
+// ## --> Dark Mode Colors
+const DARK_COLORS = {
+  DATA: "#1A3D56", // Darker shade of blue
+  PROCESS: "#0A4F47", // Darker teal
+  AI: "#FF7F2D", // Slightly brighter, but still visible in dark mode
+  OUTPUT: "#FFD700", // Bright gold for contrast
+  EDGE: "rgba(156, 156, 156, 0.5)", // Lighter gray for edges
+  BG_NODE: "rgba(94, 94, 94, 0.6)", // Semi-transparent dark gray for nodes
+  BG_EDGE: "#4D4D4D", // Dark gray for edges
 };
 
 // Main graph nodes and edges (static)

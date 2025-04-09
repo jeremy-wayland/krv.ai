@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 // import Mover from "@/images/about/moveTest";
-import Mover from "../Hero/data_to_insight-animation";
+import Mover from "../Hero/animation-light";
 
 const About = () => {
   return (
