@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { useState } from "react";
 import MoverLight from "./animation-light";
 import MoverDark from "./animation-dark";
@@ -86,7 +86,7 @@ const Hero = () => {
                 <div className="h-full w-full dark:hidden">
                   <MoverLight />
                 </div>
-                <div className="hidden shadow-solid-l dark:block">
+                <div className="hidden dark:block">
                   <MoverDark />
                 </div>
                 {/* <Image
