@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MoverLight from "./animation";
+// import MoverLight from "./animation";
 
 export default function FinanceHeader() {
   return (
