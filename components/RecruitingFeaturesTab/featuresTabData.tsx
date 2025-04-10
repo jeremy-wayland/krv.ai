@@ -22,8 +22,8 @@ const featuresTabData: FeatureTab[] = [
     title: "Context-Aware Search",
     desc1: `Stop digging through lists. Our graph search engine understands nuance—so you can search with intent, not just keywords.`,
     desc2: `Looking for someone who worked under a certain leader, in a fast-scaling company, and succeeded in high-pressure environments? Krv connects the dots instantly, delivering highly relevant, context-rich candidate results.`,
-    image: "/images/recruiting/ui_mockup2.svg",
-    imageDark: "/images/recruiting/ui_mockup2.svg",
+    image: "/images/UIs/ui_mockup2.svg",
+    imageDark: "/images/UIs/ui_mockup2.svg",
   },
 ];
 

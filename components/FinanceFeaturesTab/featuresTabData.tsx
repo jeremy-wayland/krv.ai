@@ -20,11 +20,9 @@ const featuresTabData: FeatureTab[] = [
     desc3: [
       <strong key="desc3-bold">3)</strong>,
       <span key="desc3-text">
-        {" "}
-        Groups are non-intersecting sets of similar objects{" "}
+        Groups are non-intersecting sets of similar objects
       </span>,
       <em key="desc3-italic">
-        {" "}
         (similar companies across multiple dimensions)
       </em>,
     ],
