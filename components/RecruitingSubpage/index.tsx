@@ -9,7 +9,7 @@ export default function RecruiterHeader() {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                The Missing Link Between Your Data and AI Intelligence 🔍
+                Unlock Smarter Recruiting 🚀
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero">
                 Less Searching.{" "}
@@ -17,12 +17,31 @@ export default function RecruiterHeader() {
                   More Hiring.
                 </span>
               </h1>
-              <p>
-                We transform your recruiting data into a context-rich graph that
-                LLMs like ChatGPT actually understand—so you can find the right
-                candidates faster. By connecting placements, outcomes,
-                industries, and more, Krv helps you surface better matches with
-                less effort and more intelligence.
+              <p className="lead-text">
+                <strong>
+                  <em>
+                    Finding the right candidate is a drag – you know better than
+                    us.
+                  </em>
+                </strong>
+              </p>
+
+              <p className="description-text">
+                Hundreds of resumes, different job platforms, and few legitimate
+                contenders. It’s like looking for a needle in a haystack every
+                time a job description comes in.
+              </p>
+              <br />
+              <p className="call-to-action">
+                <strong>
+                  <em>Tell us what you're looking for. We'll do the rest.</em>
+                </strong>
+              </p>
+
+              <p className="solution-description">
+                Krv Analytic's AI recruiting solution will give you your top
+                applicants, explain why they were selected, and show you how to
+                refine your specs until you have your perfect interview list.
               </p>
             </div>
 
@@ -35,13 +54,13 @@ export default function RecruiterHeader() {
                     <MoverDark />
                   </div> */}
                 <Image
-                  src="/images/recruiting/ui_mockup.svg"
+                  src="/images/recruiting/ui_mockup1.svg"
                   alt="About"
                   className="hidden dark:block"
                   fill
                 />
                 <Image
-                  src="/images/recruiting/ui_mockup.svg"
+                  src="/images/recruiting/ui_mockup1.svg"
                   alt="About"
                   className="dark:hidden"
                   fill
