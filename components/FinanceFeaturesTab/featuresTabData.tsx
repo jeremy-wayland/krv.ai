@@ -31,8 +31,8 @@ const featuresTabData: FeatureTab[] = [
   },
   {
     id: "tabTwo",
-    title: "Smarter Candidate Discovery",
-    desc1: `The graph to the right visualizes stock performance over the past 36 months for companies held in various prominent investment portfolios.`,
+    title: "A Portfolio Diversity Model",
+    desc1: `The graph to the right visualizes stock performance over the past 36 months for companies held in various prominent investment portfolios. Note that the Berkshire portfolio has holdings across every group/company archetype!`,
     desc2: `The data consists of tabular, time-series financial metrics, including stock performance, for companies in portfolios managed by Berkshire Hathaway (Warren Buffett), ARK Innovation ETF (Cathie Wood), Bridgewater Associates (Ray Dalio), Fidelity Magellan Fund (Peter Lynch), and Daily Journal Corporation (Charlie Munger). The data is publicly available on Yahoo Finance.`,
     image: "/images/features/hudsonBayDemo.svg",
     imageDark: "/images/features/hudsonBayDemoDark.svg",
