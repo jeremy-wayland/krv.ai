@@ -63,7 +63,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Support For Tabluar Data
+                  Reveal True Fit
                 </button>
               </div>
             </div>
@@ -82,7 +82,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Easy To Use
+                  Uncover Hidden Talent
                 </button>
               </div>
             </div>
@@ -101,7 +101,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Eliminate Preprocessing Headaches
+                  Search with Context
                 </button>
               </div>
             </div>

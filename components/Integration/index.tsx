@@ -12,8 +12,8 @@ const Integration = () => {
           <SectionHeader
             headerInfo={{
               title: `INTEGRATIONS`,
-              subtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+              subtitle: `Seamlessly Connect Your Recruiting Platforms`,
+              description: `Effortlessly plug into your existing systems—whether it's BullHorn, Dice, LinkedIn Recruiter, or others—to pull candidate data and current placement insights. Our integration makes it easy to keep your data fresh, accurate, and accessible, no matter where you are.`,
             }}
           />
 
