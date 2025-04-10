@@ -20,11 +20,11 @@ const ErroPage = () => {
         />
 
         <h2 className="mb-5 text-2xl font-semibold text-black dark:text-white md:text-4xl">
-          This Page Does Not Exist
+          This Page Does Not Exist (yet)
         </h2>
         <p className="mb-7.5">
-          The page you were looking for appears to have been moved, deleted or
-          does not exist.
+          The page you were looking for is in the progress of being added or
+          revamped!
         </p>
 
         <a

@@ -75,7 +75,7 @@ const About = () => {
                 </span>
               </h2>
               <p>
-                KKrv Analytics transforms all your business data—from chats and
+                Krv Analytics transforms all your business data—from chats and
                 emails to transactions and reports—into an intelligent Cosmic
                 Graph. Our system deciphers advanced population dynamics,
                 empowering users to unlock actionable insights from complex

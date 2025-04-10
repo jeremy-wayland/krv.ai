@@ -20,9 +20,9 @@ const Testimonial = () => {
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `TESTIMONIALS`,
-                subtitle: `Client’s Testimonials`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+                title: `EXAMPLE`,
+                subtitle: `Potential Use Cases`,
+                description: `Drives smarter decision-making through real-time, data-driven insights.`,
               }}
             />
           </div>
@@ -43,7 +43,7 @@ const Testimonial = () => {
           }}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 1, delay: 0.1 }}
+          transition={{ duration: 1, delay: 1.1 }}
           viewport={{ once: true }}
           className="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0"
         >
@@ -54,7 +54,7 @@ const Testimonial = () => {
               spaceBetween={50}
               slidesPerView={2}
               autoplay={{
-                delay: 2500,
+                delay: 5500,
                 disableOnInteraction: false,
               }}
               pagination={{

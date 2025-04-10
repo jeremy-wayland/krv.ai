@@ -331,6 +331,9 @@ const Integration = () => {
           </div>
         </div>
       </section>
+      <br />
+      <br />
+      <br />
     </>
   );
 };

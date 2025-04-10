@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import FeaturesTab from "@/components/FeaturesTab";
+import FeaturesTab from "@/components/RecruitingFeaturesTab";
 import FunFact from "@/components/FunFact";
 import Integration from "@/components/Integration";
 import CTA from "@/components/CTA";
-import Testimonial from "@/components/Testimonial";
+import Testimonial from "@/components/FinanceUseCases";
 import Pricing from "@/components/Pricing";
 import MoverLight from "../../../components/RecruitingSubpage/animation";
 import RecruiterHeader from "@/components/RecruitingSubpage";
