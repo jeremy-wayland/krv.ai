@@ -3,6 +3,7 @@ export type Testimonial = {
   name: string;
   destination?: string;
   image: any;
+  imageDark?: any;
   content: string;
   designation: string;
 };

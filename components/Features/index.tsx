@@ -14,8 +14,8 @@ const Feature = () => {
           <SectionHeader
             headerInfo={{
               title: "WHAT WE BRING",
-              subtitle: "Core Features of Our Graph-Based Analytics",
-              description: `We provide professionals with a powerful AI-focused, graph-based modeling environment to extract highly detailed and specific insights from complex data.`,
+              subtitle: "Graph-Powered Data Structuring 📊",
+              description: `We transform your raw data into a structured, graph-based format for accurate, reliable, and stable AI modeling—unlocking deeper insights with confidence.`,
             }}
           />
           {/* <!-- Section Title End --> */}

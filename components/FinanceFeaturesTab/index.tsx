@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import FeaturesTabItem from "./FeaturesTabItem";
 import featuresTabData from "./featuresTabData";
+import SectionHeader from "../Common/SectionHeader";
 
 import { motion } from "framer-motion";
 
@@ -63,7 +64,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Support For Tabluar Data
+                  Reading Our Graphs
                 </button>
               </div>
             </div>
@@ -82,7 +83,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Easy To Use
+                  Example Model
                 </button>
               </div>
             </div>
@@ -101,7 +102,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Eliminate Preprocessing Headaches
+                  A Quick Takeaway
                 </button>
               </div>
             </div>

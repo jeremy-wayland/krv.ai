@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 64 64"
+   fill="none"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="searchWcontext.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="10.645686"
+     inkscape:cx="29.448547"
+     inkscape:cy="24.235168"
+     inkscape:window-width="2560"
+     inkscape:window-height="1387"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g5" />
+  <title
+     id="title1">Icon showing context-aware search focusing on connections within a data graph, representing nuanced search beyond keywords.</title>
+  <circle
+     cx="22.363914"
+     cy="21.518501"
+     r="4.5"
+     fill="#4285f4"
+     id="circle1" />
+  <circle
+     cx="30.363914"
+     cy="29.518501"
+     r="5.5"
+     fill="#ea4335"
+     id="circle2" />
+  <circle
+     cx="38.363914"
+     cy="37.518501"
+     r="4.5"
+     fill="#34a853"
+     id="circle3" />
+  <line
+     x1="24.863914"
+     y1="24.018501"
+     x2="27.863914"
+     y2="27.018501"
+     stroke="#b0b0b0"
+     stroke-width="2"
+     stroke-linecap="round"
+     id="line3" />
+  <line
+     x1="32.363914"
+     y1="31.518501"
+     x2="36.363914"
+     y2="35.518501"
+     stroke="#fbbc05"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="line4" />
+  <g
+     id="g5"
+     transform="translate(-5.6360856,-6.4814984)">
+    <line
+       x1="48"
+       y1="48"
+       x2="57"
+       y2="57"
+       stroke="#4285f4"
+       stroke-width="5"
+       stroke-linecap="round"
+       id="line5" />
+    <circle
+       cx="36"
+       cy="36"
+       r="16"
+       fill="none"
+       stroke="#707070"
+       stroke-width="3"
+       id="circle4" />
+  </g>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon showing context-aware search focusing on connections within a data graph, representing nuanced search beyond keywords.</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
