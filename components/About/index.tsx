@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 // import Mover from "@/images/about/moveTest";
-import Mover from "../Hero/animation-light";
+import Mover from "./nodeBoundce";
 
 const About = () => {
   return (
@@ -30,19 +30,19 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
-              <Image
-                src="/images/about/about-light-01.svg"
-                alt="About"
-                className="dark:hidden"
-                fill
-              />
+              <div className="h-full w-full dark:hidden">
+                <Mover />
+              </div>
+              <div className="hidden h-full w-full dark:block">
+                <Mover />
+              </div>
 
-              <Image
+              {/* <Image
                 src="/images/about/about-dark-01.svg"
                 alt="About"
                 className="hidden dark:block"
                 fill
-              />
+              /> */}
             </motion.div>
             <motion.div
               variants={{
@@ -123,7 +123,7 @@ const About = () => {
       {/* <!-- ===== About End ===== --> */}
 
       {/* <!-- ===== About Two Start ===== --> */}
-      <section>
+      {/* <section>
         <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
           <div className="flex items-center gap-8 lg:gap-32.5">
             <motion.div
@@ -218,7 +218,7 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ===== About Two End ===== --> */}
     </>
   );
