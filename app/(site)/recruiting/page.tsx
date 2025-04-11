@@ -1,11 +1,11 @@
+// import Brands from "@/components/Brands";
+// import FunFact from "@/components/FunFact";
+// import Pricing from "@/components/Pricing";
+
 import { Metadata } from "next";
-import FeaturesTab from "@/components/RecruitingFeaturesTab";
-import FunFact from "@/components/FunFact";
-import Integration from "@/components/Integration";
 import CTA from "@/components/CTA";
-import Testimonial from "@/components/FinanceUseCases";
-import Pricing from "@/components/Pricing";
-import MoverLight from "../../../components/RecruitingSubpage/animation";
+import Integration from "@/components/Integration";
+import FeaturesTab from "@/components/RecruitingFeaturesTab";
 import RecruiterHeader from "@/components/RecruitingSubpage";
 
 export const metadata: Metadata = {
@@ -21,7 +21,8 @@ export default function Home() {
       <FeaturesTab />
       {/* <FunFact /> */}
       <Integration />
-      {/* <CTA /> */}
+      <CTA />
+      {/* <Brands /> */}
       {/* <Testimonial /> */}
       {/* <Pricing /> */}
     </main>

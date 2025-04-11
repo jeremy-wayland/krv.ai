@@ -29,12 +29,11 @@ const CTA = () => {
               className="animate_left md:w-[70%] lg:w-1/2"
             >
               <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Join With Us Today & Increase Your Productivity
+                Reach Out to Book a Personalized Demo of Our Recruiting Platform
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
+                Whether you're scaling fast or simply tired of clunky applicant
+                tracking systems, we're here to help streamline the process.
               </p>
             </motion.div>
             <motion.div
@@ -57,17 +56,17 @@ const CTA = () => {
             >
               <div className="flex items-center justify-end xl:justify-between">
                 <Image
-                  width={299}
-                  height={299}
-                  src="/images/shape/shape-06.png"
+                  width={349}
+                  height={349}
+                  src="/images/UIs/ui_mockup1.svg"
                   alt="Saly"
                   className="hidden xl:block"
                 />
                 <a
-                  href="/auth/signup"
+                  href="/contact"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
-                  Sign up free
+                  Book a Demo
                   <Image
                     width={20}
                     height={20}
