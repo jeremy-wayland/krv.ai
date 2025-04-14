@@ -52,21 +52,22 @@ const menuData: Menu[] = [
         id: 36,
         title: "Academic Collaborations",
         newTab: false,
-        path: "/coming-soon",
+        path: "/academia",
       },
     ],
-  },
-  {
-    id: 2.1,
-    title: "Meet the Team",
-    newTab: false,
-    path: "/team",
   },
   {
     id: 2.3,
     title: "About",
     newTab: false,
     path: "/about",
+  },
+
+  {
+    id: 2.1,
+    title: "Meet the Team",
+    newTab: false,
+    path: "/team",
   },
 
   {

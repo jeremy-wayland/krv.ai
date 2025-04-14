@@ -1,6 +1,6 @@
 type Props = {
-  selectedSection: "about" | "projects";
-  setSelectedSection: (section: "about" | "projects") => void;
+  selectedSection: "about" | "coal" | "pending";
+  setSelectedSection: (section: "about" | "coal" | "pending") => void;
 };
 
 const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
@@ -10,21 +10,32 @@ const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
 
   return (
     <li className="block">
+      <h4 className="mb-4 text-2xl font-semibold text-black dark:text-white">
+        Collaborations
+      </h4>
       <button
         onClick={() => setSelectedSection("about")}
         className={`${baseClasses} ${
           selectedSection === "about" ? activeStyle : inactiveStyle
         }`}
       >
-        Introduction
+        About
       </button>
       <button
-        onClick={() => setSelectedSection("projects")}
+        onClick={() => setSelectedSection("coal")}
         className={`${baseClasses} ${
-          selectedSection === "projects" ? activeStyle : inactiveStyle
+          selectedSection === "coal" ? activeStyle : inactiveStyle
+        } text-left`}
+      >
+        Coal Retirement w/ UCSB
+      </button>
+      <button
+        onClick={() => setSelectedSection("pending")}
+        className={`${baseClasses} ${
+          selectedSection === "pending" ? activeStyle : inactiveStyle
         }`}
       >
-        Current Projects
+        <i>Coming Soon!</i>
       </button>
     </li>
   );

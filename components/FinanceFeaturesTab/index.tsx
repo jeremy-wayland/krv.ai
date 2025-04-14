@@ -45,7 +45,7 @@ const FeaturesTab = () => {
             }}
             initial="hidden"
             whileInView="visible"
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
             className="animate_top mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-12.5"
           >

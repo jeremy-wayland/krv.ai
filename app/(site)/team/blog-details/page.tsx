@@ -1,5 +1,3 @@
-import RelatedPost from "@/components/Blog/RelatedPost";
-import SharePost from "@/components/Blog/SharePost";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -70,8 +68,6 @@ const SingleBlogPage = async () => {
                   </li>
                 </ul>
               </div>
-
-              <RelatedPost />
             </div>
 
             <div className="lg:w-2/3">
@@ -158,8 +154,6 @@ const SingleBlogPage = async () => {
                     non, interdum ipsum.
                   </p>
                 </div>
-
-                <SharePost />
               </div>
             </div>
           </div>
