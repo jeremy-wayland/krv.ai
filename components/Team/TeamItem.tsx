@@ -27,7 +27,7 @@ const TeamItem = ({ blog }: { blog: Blog }) => {
         viewport={{ once: true }}
         className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
       >
-        <Link href={`/blog/`} className="relative block h-auto w-1/2">
+        <Link href={``} className="relative block h-auto w-1/2">
           {" "}
           {/* Adjust container width */}
           <Image
