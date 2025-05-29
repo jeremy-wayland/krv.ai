@@ -26,9 +26,9 @@ const About = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+              className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
             >
               <div className="h-full w-full dark:hidden">
                 <Mover />
