@@ -4,7 +4,7 @@ const faqData: FAQ[] = [
   {
     id: 1,
     quest: "So What Do You Do Again?",
-    ans: "We transform your raw data into a powerful, context-rich graph structure that LLMs like ChatGPT can understand. By uncovering complex relationships and adding advanced analysis, we provide AI with the ability to deliver highly specific, actionable insights that drive smarter decisions.",
+    ans: "Krv Analytics consolidates your enterprise's scattered data (spreadsheets, cloud documents, databases, etc.) into one platform and applies AI-powered analytics for instant insights and custom multimodal workflows. By preserving full context, Krv delivers reliable, natural-language answers across all your data. Founded by data engineers and math PhDs, Krv accelerates confident, data-driven decisions.",
   },
   {
     id: 2,

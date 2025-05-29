@@ -6,6 +6,7 @@ const BlogData: Blog[] = [
     mainImage: "/images/team/jerm_hs.png",
     title: "Jeremy Wayland",
     metadata: "Founder | Doctoral Researcher",
+    // body: "Jeremy is a seasoned researcher with a passion for technology and innovation. He has a background in computer science and has been instrumental in developing cutting-edge solutions.",
   },
   {
     _id: 2,
@@ -14,7 +15,7 @@ const BlogData: Blog[] = [
     metadata: "Founder | Developer",
   },
   {
-    _id: 2,
+    _id: 3,
     mainImage: "/images/team/stu_hs.png",
     title: "Stuart Wayland",
     metadata: "Founder | Doctoral Researcher",
