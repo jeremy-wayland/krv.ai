@@ -18,21 +18,27 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                Rewiring the Modern Data Stack With Agents 🤖
+                Agentic Data Engineering, For The Modern Stack 📚
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
                 {/* Free Next.js Template for {"   "} */}
-                Intelligence. {"   "}
+                Fluent In {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  In Context.
+                  Your Data.
                 </span>
               </h1>
               <p>
-                Krv Analytics is the AI-native agent for your data. We unify
-                spreadsheets, docs, and databases into a single platform,
-                transforming messy data into context-rich intelligence LLMs can
-                understand. With AI-powered search and natural-language answers,
-                Krv empowers faster, smarter decisions.
+                We're solving the biggest headache in data engineering:
+                curating, cleaning, and preparing data for specific downstream
+                tasks.
+                <br />
+                <span style={{ display: "block", height: "0.5em" }}></span>
+                From spreadsheets and APIs to databases and docs, Krv helps
+                organizations transform scattered, messy data into trustworthy,
+                analysis-ready pipelines—fast. We use live knowledge graphs of
+                your data stack to generate dynamic, tailored, multistage
+                workflows. No more data engineering headaches, just natural
+                language.
                 <br />
                 <span style={{ display: "block", height: "0.5em" }}></span>
                 <em>Built by data engineers and PhDs.</em>

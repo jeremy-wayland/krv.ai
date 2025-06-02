@@ -46,9 +46,15 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  At Krv, we unlock AI's potential through transparency and
-                  innovation, making it a trusted, explainable partner in
-                  decision-making.
+                  At Krv, we're not just automating data engineering—we're
+                  bridging the gap between cutting-edge research and real-world
+                  business needs.
+                  {/* We help teams move beyond brittle,
+                  low-quality pipelines by creating stable, high-dimensional
+                  representations of complex data. */}
+                  {/* The result? Better analytics,
+                  smarter insights, and a foundation built for scale—not just
+                  speed. */}
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // import Brands from "@/components/Brands";
 export default function DocsPage() {
   const [selectedSection, setSelectedSection] = useState<"about" | "projects">(
-    "about",
+    "projects",
   );
 
   return (
@@ -45,7 +45,7 @@ export default function DocsPage() {
 
               <div className="w-full px-4 lg:w-3/4">
                 <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                  {selectedSection === "about" && (
+                  {/* {selectedSection === "about" && (
                     <>
                       <section className="prose lg:prose-lg mx-auto px-4 py-8">
                         <h1 className="mb-6 text-4xl font-bold">
@@ -107,7 +107,7 @@ export default function DocsPage() {
                         </p>
                       </section>
                     </>
-                  )}
+                  )} */}
                   {selectedSection === "projects" && (
                     <>
                       <h1>On the Horizon</h1>

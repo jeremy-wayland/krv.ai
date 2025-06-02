@@ -10,14 +10,14 @@ const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
 
   return (
     <li className="block">
-      <button
+      {/* <button
         onClick={() => setSelectedSection("about")}
         className={`${baseClasses} ${
           selectedSection === "about" ? activeStyle : inactiveStyle
         }`}
       >
         Introduction
-      </button>
+      </button> */}
       <button
         onClick={() => setSelectedSection("projects")}
         className={`${baseClasses} ${

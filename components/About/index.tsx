@@ -28,7 +28,7 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
+              className="animate_top rounded-lg p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
             >
               <div className="h-full w-full dark:hidden">
                 <Mover />
@@ -69,17 +69,21 @@ const About = () => {
                 Our Secret Sauce
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Lightweight Graph-Based {"   "}
+                Custom Workflows {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  Model Intelligence
+                  On Demand
                 </span>
               </h2>
               <p>
-                Krv Analytics transforms all your business data—from chats and
-                emails to transactions and reports—into an intelligent Cosmic
-                Graph. Our system deciphers advanced population dynamics,
-                empowering users to unlock actionable insights from complex
-                datasets.
+                No-code tools (n8n and Langflow) are like a fully stocked
+                kitchen—you have all the ingredients and tools, but you still
+                need to cook the meal yourself.
+                <br />
+                <span style={{ display: "block", height: "0.5em" }}></span>
+                We're building the private chef of data workflows: just tell us
+                what you want to eat, and our smart chef handles
+                everything—selecting ingredients, cooking, and serving—so you
+                don't have to lift a finger.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -90,12 +94,14 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Better Data = Smarter Models
+                    Representation Learning
                   </h3>
                   <p>
-                    We refine text structure, generate high-quality training
-                    data, and benchmark model performance to improve accuracy,
-                    transparency, and reduce bias.
+                    We develop a deep understanding of your infrastructure, your
+                    data types, systems, and how they interconnect, for
+                    meaningful analysis. Think of it like learning the terrain
+                    before building roads: we ensure preprocessing and data
+                    engineering allign with downstream goals.
                   </p>
                 </div>
               </div>
@@ -107,12 +113,15 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Intelligent AI Agents
+                    Generative Graph Modeling
                   </h3>
                   <p>
-                    Our AI-powered agents analyze data, provide recommendations,
-                    and automate tasks with a custom-built semantic framework
-                    for reliable decision-making.
+                    We model agentic workflows as directed graphs. Using
+                    diffusion-based generative models, we spin up dynamic
+                    workflows from your data stack in response to natural
+                    language queries. These graph models guide agent behavior
+                    and integrate seamlessly with no-code orchestration
+                    platforms.
                   </p>
                 </div>
               </div>

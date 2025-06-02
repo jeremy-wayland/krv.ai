@@ -223,6 +223,7 @@ const AnimatedMCMCGraph = () => {
         maxHeight: "812px",
         display: "block",
         margin: "auto",
+        background: "none",
       }}
     >
       {/* Render Edges first (background) */}
