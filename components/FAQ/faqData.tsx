@@ -3,18 +3,18 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "So What Do You Do Again?",
-    ans: "We transform your raw data into a powerful, context-rich graph structure that LLMs like ChatGPT can understand. By uncovering complex relationships and adding advanced analysis, we provide AI with the ability to deliver highly specific, actionable insights that drive smarter decisions.",
+    quest: "Why Do I Need This?",
+    ans: "Well, unless your data magically cleans and structures itself (in which case, please sell us your product 😉), you need this. Most companies are sitting on piles of messy, multimodal data: text, tables, logs, images, whatever—which creates serious headaches, even for experienced data scientists. Krv doesn't just handle that complexity—we leverage it, turning chaos into a live knowledge graph that actually improves your data quality and unlocks smarter, faster downstream analysis. Got analysts but no data engineers? Krv fills the gap. Got data engineers? We're their copilot. Either way, we plug in fast and make your team way more productive.",
   },
   {
     id: 2,
-    quest: "Why Graphs?",
-    ans: "Graphs make complex data relationships easy to understand and explore. They let you connect the dots—literally—between different pieces of information, uncovering patterns and insights that might otherwise go unnoticed. With our tool, you don't need a background in machine learning or technical expertise. Just upload your tabular data (like a CSV file), and we'll turn it into a visual knowledge base. From there, you can explore connections, run optimized searches, and quickly link your documents to your data, helping you make smarter decisions without the heavy lifting.",
+    quest: "Is Data Engineering Really That Hard?",
+    ans: "Yes—it often is. Around 80% of data science work goes into cleaning, curating, and preparing data, which is both time-consuming and error-prone. That’s where Krv Analytics comes in. We automate the hardest parts of data engineering, transforming raw inputs into a live knowledge graph. This lets you skip the wrangling and focus on extracting insights through dynamic, adaptive workflows built for your specific needs.",
   },
   {
     id: 3,
-    quest: "Is Preprocessing Really Important?",
-    ans: "Bad data leads to bad decisions. Missing values, inconsistent formats, and improper encoding can quietly sabotage your models, making results unreliable. Preprocessing isn't just tedious—it's critical. The choices you make here directly affect your outcomes, and getting it wrong can mean starting over. That's why we rely on graph-based models that handle these challenges more gracefully. They're better at preserving the structure of your data, minimizing preprocessing headaches, and delivering reliable insights without the risk of critical missteps.",
+    quest: "Why Graphs?",
+    ans: "Graphs make complex data relationships easy to understand and explore. They let you connect the dots—literally—between different pieces of information, uncovering patterns and insights that might otherwise go unnoticed. Unlike asking ChatGPT for a data engineering plan without constraints, graphs provide a structured environment with clear rules, ensuring your plans are realistic and fit your infrastructure. That’s the power of graphs.",
   },
 ];
 

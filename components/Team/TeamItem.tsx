@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TeamItem = ({ blog }: { blog: Blog }) => {
-  const { mainImage, title, metadata } = blog;
+  const { mainImage, title, metadata, body } = blog;
 
   return (
     <>
@@ -48,6 +48,8 @@ const TeamItem = ({ blog }: { blog: Blog }) => {
             </Link>
           </h3>
           <p className="line-clamp-3">{metadata}</p>
+          <div className="h-2" />
+          {/* <p className="line-clamp-3 text-sm text-black">{body}</p> */}
         </div>
       </motion.div>
     </>

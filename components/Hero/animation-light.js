@@ -25,14 +25,14 @@ const DARK_COLORS = {
 
 // Main graph nodes and edges (static)
 const NODES = [
-  { id: 1, x: 100, y: 100, label: "User Logs", type: "DATA" },
-  { id: 2, x: 100, y: 200, label: "Spreadsheets", type: "DATA" },
+  { id: 1, x: 100, y: 100, label: "Database", type: "DATA" },
+  { id: 2, x: 100, y: 200, label: "Emails", type: "DATA" },
   { id: 3, x: 100, y: 300, label: "App Data", type: "DATA" },
-  { id: 4, x: 300, y: 200, label: "Krv Cosmic Graphs", type: "PROCESS" },
-  { id: 5, x: 500, y: 200, label: "AI Insights", type: "AI" },
-  { id: 6, x: 700, y: 100, label: "Answers", type: "OUTPUT" },
-  { id: 7, x: 700, y: 200, label: "Predictions", type: "OUTPUT" },
-  { id: 8, x: 700, y: 300, label: "Solutions", type: "OUTPUT" },
+  { id: 4, x: 300, y: 200, label: "Knowledge Graph", type: "PROCESS" },
+  { id: 5, x: 500, y: 200, label: "Agentic Workflow", type: "AI" },
+  { id: 6, x: 700, y: 100, label: "Chat", type: "OUTPUT" },
+  { id: 7, x: 700, y: 200, label: "Analytics", type: "OUTPUT" },
+  { id: 8, x: 700, y: 300, label: "Recs", type: "OUTPUT" },
 ];
 
 const EDGES = [
