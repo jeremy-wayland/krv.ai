@@ -215,16 +215,14 @@ const AnimatedMCMCGraph = () => {
   return (
     <svg
       ref={svgRef}
-      viewBox="0 0 375 812" // Optimized viewport
+      viewBox="0 -200 375 900" // Adjusted: min-y -50, height 900 (812 + 50 + extra buffer)
+      // REMOVE conflicting inline styles for height/width
       style={{
-        width: "100%",
-        maxWidth: "375px", // Max width constraint
-        height: "80vh", // Adjust height as needed
-        maxHeight: "812px",
         display: "block",
         margin: "auto",
         background: "none",
       }}
+      className="h-full w-full max-w-sm" // max-w-sm is 384px, close to 375px; or use max-w-[375px]
     >
       {/* Render Edges first (background) */}
       {EDGES.map(([fromId, toId]) => {
