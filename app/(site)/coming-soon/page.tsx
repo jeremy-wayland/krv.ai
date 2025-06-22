@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Coming Soon - Solid SaaS Boilerplate",
+  title: "Coming Soon!",
   description: "This page is coming soon. New content is being added shortly!",
 };
 

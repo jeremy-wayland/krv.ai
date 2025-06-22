@@ -7,15 +7,19 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
-const inter = Inter({ subsets: ["latin"] });
-
 import ToasterContext from "../context/ToastContext";
+import { usePathname } from "next/navigation";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const hideNav = pathname.startsWith("/deck");
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
@@ -25,10 +29,10 @@ export default function RootLayout({
           defaultTheme="light"
         >
           <Lines />
-          <Header />
+          {!hideNav && <Header />}
           <ToasterContext />
           {children}
-          <Footer />
+          {!hideNav && <Footer />}
           <ScrollToTop />
         </ThemeProvider>
       </body>
