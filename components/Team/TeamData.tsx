@@ -5,12 +5,12 @@ export const TeamData: TeamMember[] = [
     _id: 1,
     name: "Jeremy Wayland",
     role: "Co-Founder",
-    headshot: "/images/team/jerm_hs.png", // Use a more descriptive name
-    linkedInUrl: "https://www.linkedin.com/in/jeremy-wayland/", // Add real URLs
+    headshot: "/images/team/jerm_hs.png",
+    linkedInUrl: "https://www.linkedin.com/in/jeremy-wayland/",
     keyAchievements: [
-      "PhD Candidate - Geometric Deep Learning",
-      "Y Combinator AI Start-Up School Grad",
-      "MS in Data Science",
+      "PhD Candidate – Geometric Deep Learning",
+      "YCombinator AI Start-Up School Grad",
+      "Ex-Research Scientist, CHOC Children's",
     ],
     education: "",
   },
@@ -21,7 +21,7 @@ export const TeamData: TeamMember[] = [
     headshot: "/images/team/sid_hs.png",
     linkedInUrl: "https://www.linkedin.com/in/sidney-gathrid/",
     keyAchievements: [
-      "Ex-Heliogen [AI + Solar Thermal Startup]",
+      "Ex-Heliogen (AI + Solar Thermal Startup)",
       "Builder of Fast, Scalable Data Infrastructure",
       "Clean Energy Engineer with Startup DNA",
     ],
@@ -34,8 +34,8 @@ export const TeamData: TeamMember[] = [
     headshot: "/images/team/stu_hs.png",
     linkedInUrl: "https://www.linkedin.com/in/stuart-wayland-96b621253/",
     keyAchievements: [
-      "PhD Candidate - Quantum Algorithms",
-      "Expert in Applied Spectral Graphs",
+      "PhD Candidate – Quantum Algorithms",
+      "Ex-Software Developer, Encryptek",
       "MS in Computer Science",
     ],
     education: "",
