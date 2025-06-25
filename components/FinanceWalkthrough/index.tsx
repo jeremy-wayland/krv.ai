@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import FeaturesTabItem from "./FeaturesTabItem";
-import featuresTabData from "./featuresTabData";
+import WalkthroughItem from "./walkthroughItem";
+import WalkthroughData from "./walkthroughData";
 import { motion } from "framer-motion";
 
 const Walkthrough = () => {
@@ -126,12 +126,12 @@ const Walkthrough = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto max-w-c-1154"
           >
-            {featuresTabData.map((feature, key) => (
+            {WalkthroughData.map((feature, key) => (
               <div
                 className={feature.id === currentTab ? "block" : "hidden"}
                 key={key}
               >
-                <FeaturesTabItem featureTab={feature} />
+                <WalkthroughItem featureTab={feature} />
               </div>
             ))}
           </motion.div>

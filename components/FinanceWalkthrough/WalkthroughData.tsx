@@ -1,6 +1,6 @@
 import { FeatureTab } from "@/types/featureTab";
 
-const featuresTabData: FeatureTab[] = [
+const WalkthroughData: FeatureTab[] = [
   {
     id: "tabOne",
     title: "Understanding Nodes and Edges",
@@ -48,4 +48,4 @@ const featuresTabData: FeatureTab[] = [
   },
 ];
 
-export default featuresTabData;
+export default WalkthroughData;
