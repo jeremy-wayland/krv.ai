@@ -1,9 +1,10 @@
-type Props = {
-  selectedSection: "about" | "coal" | "pending";
-  setSelectedSection: (section: "about" | "coal" | "pending") => void;
-};
+//components/Academia/AcademicSidebar.tsx
+import { AcademicSidebarProps } from "@/types/academic";
 
-const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
+const AcademicSidebar = ({
+  selectedSection,
+  setSelectedSection,
+}: AcademicSidebarProps) => {
   const baseClasses = "flex w-full rounded-sm px-3 py-2 text-base";
   const activeStyle = "bg-stroke text-black dark:bg-blackho dark:text-white";
   const inactiveStyle = "text-black dark:text-white";
@@ -41,4 +42,4 @@ const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
   );
 };
 
-export default SidebarLink;
+export default AcademicSidebar;

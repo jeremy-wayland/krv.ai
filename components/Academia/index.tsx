@@ -1,9 +1,8 @@
+//components/Academia/index.tsx
 "use client";
-
-import Sidebar from "@/components/Academia/Sidebar";
-
+import AcademicSidebar from "./AcademicSidebar";
 import { useState } from "react";
-// import Brands from "@/components/Brands";
+
 export default function AcademicsInfo() {
   const [selectedSection, setSelectedSection] = useState<
     "about" | "coal" | "pending"
@@ -17,7 +16,7 @@ export default function AcademicsInfo() {
             <div className="w-full px-4 lg:w-1/4">
               <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
                 <ul className="space-y-2">
-                  <Sidebar
+                  <AcademicSidebar
                     selectedSection={selectedSection}
                     setSelectedSection={setSelectedSection}
                   />
