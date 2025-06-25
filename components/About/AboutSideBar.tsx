@@ -1,9 +1,9 @@
-type Props = {
-  selectedSection: "about" | "projects";
-  setSelectedSection: (section: "about" | "projects") => void;
-};
+import { AboutSideBarProps } from "@/types/about";
 
-const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
+const AboutSidebar = ({
+  selectedSection,
+  setSelectedSection,
+}: AboutSideBarProps) => {
   const baseClasses = "flex w-full rounded-sm px-3 py-2 text-base";
   const activeStyle = "bg-stroke text-black dark:bg-blackho dark:text-white";
   const inactiveStyle = "text-black dark:text-white";
@@ -11,9 +11,9 @@ const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
   return (
     <li className="block">
       <button
-        onClick={() => setSelectedSection("projects")}
+        onClick={() => setSelectedSection("Current Projects")}
         className={`${baseClasses} ${
-          selectedSection === "projects" ? activeStyle : inactiveStyle
+          selectedSection === "Current Projects" ? activeStyle : inactiveStyle
         }`}
       >
         Current Projects
@@ -22,4 +22,4 @@ const SidebarLink = ({ selectedSection, setSelectedSection }: Props) => {
   );
 };
 
-export default SidebarLink;
+export default AboutSidebar;

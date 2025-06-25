@@ -2,11 +2,12 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Coming Soon!",
-  description: "This page is coming soon. New content is being added shortly!",
+  title: "Healthcare | Krv",
+  description:
+    "Check out our knew collaboration with Children Hospital of Orange County on improving UTI risk assesments in pediatrics ",
 };
 
-const ComingSoonPage = () => {
+const HealthCarePage = () => {
   return (
     <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55">
       <div className="animate_top mx-auto max-w-[518px] text-center">
@@ -66,4 +67,4 @@ const ComingSoonPage = () => {
   );
 };
 
-export default ComingSoonPage;
+export default HealthCarePage;

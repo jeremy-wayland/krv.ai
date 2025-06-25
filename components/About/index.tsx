@@ -1,13 +1,12 @@
 //components/About/index.tsx
 "use client";
 
-import SidebarLink from "@/components/Docs/SidebarLink";
+import AboutSideBar from "./AboutSideBar";
 import { useState } from "react";
 import { motion } from "framer-motion";
 export default function AboutInfo() {
-  const [selectedSection, setSelectedSection] = useState<"about" | "projects">(
-    "projects",
-  );
+  const [selectedSection, setSelectedSection] =
+    useState<"Current Projects">("Current Projects");
 
   return (
     <>
@@ -35,7 +34,7 @@ export default function AboutInfo() {
               <div className="w-full px-4 lg:w-1/4">
                 <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
                   <ul className="space-y-2">
-                    <SidebarLink
+                    <AboutSideBar
                       selectedSection={selectedSection}
                       setSelectedSection={setSelectedSection}
                     />
@@ -45,7 +44,7 @@ export default function AboutInfo() {
 
               <div className="w-full px-4 lg:w-3/4">
                 <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                  {selectedSection === "projects" && (
+                  {selectedSection === "Current Projects" && (
                     <>
                       <h1>On the Horizon</h1>
                       <h5>Jobba: AI-Powered Recruiting</h5>

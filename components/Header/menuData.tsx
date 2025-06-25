@@ -29,7 +29,7 @@ const menuData: Menu[] = [
         id: 36,
         title: "Healthcare",
         newTab: false,
-        path: "/coming-soon",
+        path: "/healthcare",
       },
       {
         id: 36,
