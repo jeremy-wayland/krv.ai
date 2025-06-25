@@ -1,8 +1,8 @@
-// app/(site)/academia/page-details/page.tsx
+// app/(site)/academia/page.tsx
 
 "use client";
 
-import Sidebar from "@/components/AcademicLanding/Sidebar";
+import Sidebar from "@/components/Academia/Sidebar";
 
 import { useState } from "react";
 // import Brands from "@/components/Brands";
@@ -41,21 +41,6 @@ export default function DocsPage() {
                       new approaches, and continuously push the boundary of
                       what's possible.
                     </p>
-
-                    {/* <div className="flex flex-wrap gap-5">
-                      <Image
-                        src={"/images/blog/research-collab-1.png"}
-                        width={350}
-                        height={200}
-                        alt="Research Collaboration 1"
-                      />
-                      <Image
-                        src={"/images/blog/research-collab-2.png"}
-                        width={350}
-                        height={200}
-                        alt="Research Collaboration 2"
-                      />
-                    </div> */}
 
                     <h5>Bringing Academic Techniques into Industry</h5>
 

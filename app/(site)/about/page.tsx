@@ -1,9 +1,9 @@
+//app/about/page.tsx
 "use client";
 
 import SidebarLink from "@/components/Docs/SidebarLink";
 import { useState } from "react";
 import { motion } from "framer-motion";
-// import Brands from "@/components/Brands";
 export default function DocsPage() {
   const [selectedSection, setSelectedSection] = useState<"about" | "projects">(
     "projects",
@@ -45,69 +45,6 @@ export default function DocsPage() {
 
               <div className="w-full px-4 lg:w-3/4">
                 <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                  {/* {selectedSection === "about" && (
-                    <>
-                      <section className="prose lg:prose-lg mx-auto px-4 py-8">
-                        <h1 className="mb-6 text-4xl font-bold">
-                          About Krv Analytics
-                        </h1>
-                        <p className="mb-10 text-lg leading-relaxed">
-                          Fast, confident decisions begin with complete, trusted
-                          insight. Krv Analytics is the unified data
-                          intelligence platform that transforms scattered
-                          spreadsheets, drives, and apps into a single,
-                          searchable knowledge base. Ask a question in natural
-                          language and get an answer you can trace back to the
-                          source—every time.
-                        </p>
-
-                        <h2 className="mb-4 text-3xl font-semibold">
-                          Our Approach
-                        </h2>
-                        <p className="mb-10 text-lg leading-relaxed">
-                          Data shouldn’t be intimidating. We stream tables,
-                          timelines, and text from tools your team already
-                          uses—Excel, Google Drive, Notion, relational
-                          databases, and more—into a lightweight graph. Context
-                          is preserved, relationships surface automatically, and
-                          our AI assistant sits on top so anyone can explore the
-                          full story behind the numbers in seconds. No SQL
-                          required, no extra dashboards to maintain—just
-                          understanding.
-                        </p>
-
-                        <h2 className="mb-4 text-3xl font-semibold">
-                          Why We Exist
-                        </h2>
-                        <p className="mb-10 text-lg leading-relaxed">
-                          Mid‑sized enterprises sit in a tough spot: too complex
-                          for one‑size‑fits‑all BI tooling, too lean to staff an
-                          army of data scientists. Krv bridges that gap with an
-                          AI‑ready SaaS platform that deploys in days, not
-                          months. You already own the data; we make it work for
-                          you—so recruiters find the right candidates, sales
-                          sees the next opportunity, and leadership moves with
-                          confidence.
-                        </p>
-
-                        <h2 className="mb-4 text-3xl font-semibold">
-                          What Makes Us Different
-                        </h2>
-
-                        <p className="mb-10 text-lg leading-relaxed">
-                          Krv delivers grounded answers that link directly back
-                          to original files, giving teams full confidence in
-                          every insight. Our context-aware AI search understands
-                          plain English and explores across all your connected
-                          data—no technical expertise required. We’re built by
-                          experts with deep roots in real-world data engineering
-                          and PhD-level machine learning. And as a fully managed
-                          SaaS, Krv offers zero-friction rollout so you can get
-                          value fast without managing infrastructure.
-                        </p>
-                      </section>
-                    </>
-                  )} */}
                   {selectedSection === "projects" && (
                     <>
                       <h1>On the Horizon</h1>
@@ -150,7 +87,6 @@ export default function DocsPage() {
           </div>
         </section>
       </motion.div>
-      {/* <Brands /> */}
     </>
   );
 }

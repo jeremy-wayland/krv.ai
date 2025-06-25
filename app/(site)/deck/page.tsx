@@ -1,13 +1,12 @@
-// app/deck/page.tsx
-"use client";
+// app/(site)/deck/page.tsx
 import { Metadata } from "next";
 import DeckViewer from "@/components/Deck/deckViewer";
 
-// export const metadata: Metadata = {
-//   title: "Pitch Deck",
-//   description: "Confidential pitch deck for investors",
-//   robots: "noindex, nofollow",
-// };
+export const metadata: Metadata = {
+  title: "Pitch Deck",
+  description: "Confidential pitch deck for investors",
+  robots: "noindex, nofollow",
+};
 export default function DeckPage() {
   const TOTAL_SLIDES = 14;
 
