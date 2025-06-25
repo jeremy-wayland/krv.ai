@@ -1,3 +1,4 @@
+//components/Header/menuData.tsx
 import { Menu } from "@/types/menu";
 
 const menuData: Menu[] = [
@@ -12,24 +13,6 @@ const menuData: Menu[] = [
     title: "Industries",
     newTab: false,
     submenu: [
-      // {
-      //   id: 31,
-      //   title: "Blog Grid",
-      //   newTab: false,
-      //   path: "/blog",
-      // },
-      // {
-      //   id: 34,
-      //   title: "Sign In",
-      //   newTab: false,
-      //   path: "/auth/signin",
-      // },
-      // {
-      //   id: 35,
-      //   title: "Sign Up",
-      //   newTab: false,
-      //   path: "/auth/signup",
-      // },
       {
         id: 35,
         title: "Recruiting",
