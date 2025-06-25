@@ -14,7 +14,7 @@ export default function Head() {
       <meta property="og:image" content="/images/logo/logo-dark.svg" />
       <meta property="og:url" content="/app/favicon.ico" />
 
-      <link rel="icon" href="/app/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
     </>
   );
 }
