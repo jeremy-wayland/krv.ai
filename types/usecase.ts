@@ -1,4 +1,4 @@
-export type Testimonial = {
+export type UseCase = {
   id: number;
   name: string;
   destination?: string;
