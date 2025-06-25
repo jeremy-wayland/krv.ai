@@ -1,9 +1,10 @@
+//components/RecruitmentIntegrations/index.tsx
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
 
-const Integration = () => {
+const Integrations = () => {
   return (
     <>
       <section>
@@ -338,4 +339,4 @@ const Integration = () => {
   );
 };
 
-export default Integration;
+export default Integrations;

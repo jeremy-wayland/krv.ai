@@ -1,3 +1,4 @@
+//components/Finance/page.tsx
 import { Metadata } from "next";
 
 import FinanceUseCases from "@/components/FinanceUseCases";

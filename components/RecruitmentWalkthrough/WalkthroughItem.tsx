@@ -1,8 +1,9 @@
+//components/RecruitmentWalkthrough/WalkthroughItem.tsx
 import React from "react";
-import { FeatureTab } from "@/types/featureTab";
+import { WalkthroughTab } from "@/types/walkthroughtab";
 import Image from "next/image";
 
-const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
+const WalkthroughItem = ({ featureTab }: { featureTab: WalkthroughTab }) => {
   const { title, desc1, desc2, image, imageDark } = featureTab;
 
   return (
@@ -29,4 +30,4 @@ const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
   );
 };
 
-export default FeaturesTabItem;
+export default WalkthroughItem;

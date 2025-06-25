@@ -1,12 +1,13 @@
+//components/RecruitmentWalkthrough/index.tsx
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import FeaturesTabItem from "./FeaturesTabItem";
-import featuresTabData from "./featuresTabData";
+import WalkthroughItem from "./WalkthroughItem";
+import WalkthroughData from "./WalkthroughData";
 
 import { motion } from "framer-motion";
 
-const FeaturesTab = () => {
+const Walkthrough = () => {
   const [currentTab, setCurrentTab] = useState("tabOne");
 
   return (
@@ -127,12 +128,12 @@ const FeaturesTab = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto max-w-c-1154"
           >
-            {featuresTabData.map((feature, key) => (
+            {WalkthroughData.map((feature, key) => (
               <div
                 className={feature.id === currentTab ? "block" : "hidden"}
                 key={key}
               >
-                <FeaturesTabItem featureTab={feature} />
+                <WalkthroughItem featureTab={feature} />
               </div>
             ))}
           </motion.div>
@@ -144,4 +145,4 @@ const FeaturesTab = () => {
   );
 };
 
-export default FeaturesTab;
+export default Walkthrough;

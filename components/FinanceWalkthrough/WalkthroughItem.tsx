@@ -1,8 +1,8 @@
 import React from "react";
-import { FeatureTab } from "@/types/featureTab";
+import { WalkthroughTab } from "@/types/walkthroughtab";
 import Image from "next/image";
 
-const WalkthroughItem = ({ featureTab }: { featureTab: FeatureTab }) => {
+const WalkthroughItem = ({ featureTab }: { featureTab: WalkthroughTab }) => {
   const { title, desc1, desc2, desc3, image, imageDark } = featureTab;
 
   return (

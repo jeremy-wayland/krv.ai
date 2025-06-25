@@ -1,7 +1,7 @@
+//components/RecruiterHero/index.tsx
 import Image from "next/image";
-import MoverLight from "./animation";
 
-export default function RecruiterHeader() {
+export default function RecruiterHero() {
   return (
     <main>
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
@@ -47,12 +47,6 @@ export default function RecruiterHeader() {
 
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5" style={{ height: "400px" }}>
-                {/* <div className="h-full w-full dark:hidden">
-                  <MoverLight />
-                </div> */}
-                {/* <div className="hidden dark:block">
-                    <MoverDark />
-                  </div> */}
                 <Image
                   src="/images/UIs/ui_mockup1.svg"
                   alt="About"

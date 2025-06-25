@@ -1,9 +1,10 @@
+//components/RecruitmentReachout/index.tsx
 "use client";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const CTA = () => {
+const ReachOut = () => {
   return (
     <>
       {/* <!-- ===== CTA Start ===== --> */}
@@ -92,4 +93,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default ReachOut;

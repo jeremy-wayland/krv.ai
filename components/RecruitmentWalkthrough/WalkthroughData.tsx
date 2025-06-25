@@ -1,6 +1,7 @@
-import { FeatureTab } from "@/types/featureTab";
+//components/RecruitmentWalkthrough/WalkthroughData.tsx
+import { WalkthroughTab } from "@/types/walkthroughtab";
 
-const featuresTabData: FeatureTab[] = [
+const WalkThroughData: WalkthroughTab[] = [
   {
     id: "tabOne",
     title: "Understand Fit Like Never Before",
@@ -27,4 +28,4 @@ const featuresTabData: FeatureTab[] = [
   },
 ];
 
-export default featuresTabData;
+export default WalkThroughData;

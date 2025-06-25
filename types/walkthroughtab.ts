@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type FeatureTab = {
+export type WalkthroughTab = {
   id: string;
   title: string;
   desc1: ReactNode;

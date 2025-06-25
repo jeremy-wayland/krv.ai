@@ -1,6 +1,6 @@
-import { FeatureTab } from "@/types/featureTab";
+import { WalkthroughTab } from "@/types/walkthroughtab";
 
-const WalkthroughData: FeatureTab[] = [
+const WalkthroughData: WalkthroughTab[] = [
   {
     id: "tabOne",
     title: "Understanding Nodes and Edges",

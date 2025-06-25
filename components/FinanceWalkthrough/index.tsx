@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import WalkthroughItem from "./walkthroughItem";
-import WalkthroughData from "./walkthroughData";
+import WalkthroughItem from "./WalkthroughItem";
+import WalkthroughData from "./WalkthroughData";
 import { motion } from "framer-motion";
 
 const Walkthrough = () => {

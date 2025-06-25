@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import CTA from "@/components/CTA";
-import Integration from "@/components/Integration";
-import FeaturesTab from "@/components/RecruitingFeaturesTab";
-import RecruiterHeader from "@/components/RecruitingSubpage";
+import Reachout from "@/components/RecruitmentReachout";
+import Integrations from "@/components/RecruitmentIntegrations";
+import RecruiterHero from "@/components/RecruitmentHero";
+import Walkthrough from "@/components/RecruitmentWalkthrough";
 
 export const metadata: Metadata = {
   title: "Recruiting | Krv",
@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     "Krv Recruiting Page - Explore our features and integrations for recruiters.",
   // other metadata
 };
-export default function RecruitingPage() {
+export default function RecruitmentPage() {
   return (
     <main>
-      <RecruiterHeader />
-      <FeaturesTab />
-      <Integration />
-      <CTA />
+      <RecruiterHero />
+      <Walkthrough />
+      <Integrations />
+      <Reachout />
     </main>
   );
 }
