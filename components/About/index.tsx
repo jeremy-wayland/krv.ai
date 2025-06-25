@@ -28,11 +28,13 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="animate_top rounded-lg p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
+              className="animate_top rounded-lg p-4 pb-9 shadow-solid-8 dark:bg-blacksection md:w-1/2" // <--- ADD THIS CLASS HERE
             >
+              {/* Dark theme version */}
               <div className="h-full w-full dark:hidden">
                 <Mover />
               </div>
+              {/* Light theme version */}
               <div className="hidden h-full w-full dark:block">
                 <Mover />
               </div>

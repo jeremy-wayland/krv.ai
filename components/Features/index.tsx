@@ -14,8 +14,8 @@ const Feature = () => {
           <SectionHeader
             headerInfo={{
               title: "WHAT WE BRING",
-              subtitle: "Adaptive Data Intelligence 📊",
-              description: `Krv Analytics transforms your enterprise data stack into a unified, AI-native framework. Rather than a one-size-fits-all solution, we roadmap infrastructure using a dynamic knowledge graph—then build purpose-specific agents and multimodal workflows for your data needs.`,
+              subtitle: "Unified Data Architecture 📊",
+              description: `Krv Analytics transforms your enterprise data stack into an adaptive, AI-native framework. Rather than a one-size-fits-all solution, we roadmap infrastructure using a dynamic knowledge graph—then build purpose-specific agents and multimodal workflows for your data needs.`,
             }}
           />
           {/* <!-- Section Title End --> */}
