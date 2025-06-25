@@ -1,6 +1,6 @@
-import { Feature } from "@/types/feature";
+import { Panel } from "@/types/Panel";
 
-const featuresData: Feature[] = [
+const PanelData: Panel[] = [
   {
     id: 1,
     icon: "/images/icon/icon-01.svg",
@@ -41,4 +41,4 @@ const featuresData: Feature[] = [
   },
 ];
 
-export default featuresData;
+export default PanelData;

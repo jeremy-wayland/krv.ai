@@ -3,7 +3,7 @@ import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Contact from "@/components/Contact";
-import Feature from "@/components/Features";
+import WhatWeBring from "@/components/WhatWeBring";
 
 export const metadata: Metadata = {
   title: "Welcome to Krv",
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Feature />
+      <WhatWeBring />
       <HowItWorks />
       <FAQ />
       <Contact />

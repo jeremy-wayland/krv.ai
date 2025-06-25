@@ -1,9 +1,9 @@
 import React from "react";
-import { Feature } from "@/types/feature";
+import { Panel } from "@/types/Panel";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const SingleFeature = ({ feature }: { feature: Feature }) => {
+const SinglePanel = ({ feature }: { feature: Panel }) => {
   const { icon, title, description } = feature;
 
   return (
@@ -38,4 +38,4 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   );
 };
 
-export default SingleFeature;
+export default SinglePanel;
