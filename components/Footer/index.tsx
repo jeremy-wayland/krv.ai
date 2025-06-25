@@ -1,3 +1,4 @@
+//components/Footer/index.tsx
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -30,15 +31,15 @@ const Footer = () => {
               >
                 <a href="/" className="relative">
                   <Image
-                    width={110}
-                    height={80}
+                    width={200}
+                    height={200}
                     src="/images/logo/logo-light.svg"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
-                    width={110}
-                    height={80}
+                    width={200}
+                    height={200}
                     src="/images/logo/logo-dark.svg"
                     alt="Logo"
                     className="hidden dark:block"
@@ -49,12 +50,6 @@ const Footer = () => {
                   At Krv, we're not just automating data engineering—we're
                   bridging the gap between cutting-edge research and real-world
                   business needs.
-                  {/* We help teams move beyond brittle,
-                  low-quality pipelines by creating stable, high-dimensional
-                  representations of complex data. */}
-                  {/* The result? Better analytics,
-                  smarter insights, and a foundation built for scale—not just
-                  speed. */}
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -108,22 +103,6 @@ const Footer = () => {
                         LinkedIn
                       </a>
                     </li>
-                    {/* <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Pricing
-                      </a>
-                    </li> */}
                   </ul>
                 </motion.div>
 
