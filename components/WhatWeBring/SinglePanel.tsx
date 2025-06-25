@@ -1,5 +1,5 @@
 import React from "react";
-import { Panel } from "@/types/Panel";
+import { Panel } from "@/types/panel";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
