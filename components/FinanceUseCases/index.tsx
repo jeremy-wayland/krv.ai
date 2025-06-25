@@ -8,10 +8,10 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "framer-motion";
-import SingleTestimonial from "./SingleTestimonial";
-import { testimonialData } from "./testimonialData";
+import SingleUseCase from "./SingleUseCase";
+import { UseCaseData } from "./UseCaseData";
 
-const Testimonial = () => {
+const FinanceUseCases = () => {
   return (
     <>
       <section>
@@ -72,9 +72,9 @@ const Testimonial = () => {
                 },
               }}
             >
-              {testimonialData.map((review) => (
+              {UseCaseData.map((review) => (
                 <SwiperSlide key={review?.id}>
-                  <SingleTestimonial review={review} />
+                  <SingleUseCase review={review} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -85,4 +85,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default FinanceUseCases;

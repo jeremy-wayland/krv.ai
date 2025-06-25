@@ -1,7 +1,7 @@
-import { Testimonial } from "@/types/testimonial";
+import { UseCase } from "@/types/usecase";
 import Image from "next/image";
 
-const SingleTestimonial = ({ review }: { review: Testimonial }) => {
+const SingleUseCase = ({ review }: { review: UseCase }) => {
   const { name, designation, image, imageDark, content } = review;
   return (
     <div className="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
@@ -33,4 +33,4 @@ const SingleTestimonial = ({ review }: { review: Testimonial }) => {
   );
 };
 
-export default SingleTestimonial;
+export default SingleUseCase;

@@ -1,25 +1,21 @@
 import { Metadata } from "next";
 
-import Testimonial from "@/components/FinanceUseCases";
-import FinanceHeader from "@/components/FinanceSubpage";
+import FinanceUseCases from "@/components/FinanceUseCases";
+import FinanceHero from "@/components/FinanceHero";
 import Walkthrough from "@/components/FinanceFeaturesTab";
 
 export const metadata: Metadata = {
-  title: "Krv",
-  description: "Krv Analytics",
+  title: "Finance | Krv",
+  description:
+    "Explore Krv's finance solutions, including use cases, features, and testimonials to help your business manage financial operations efficiently.",
   // other metadata
 };
 export default function Home() {
   return (
     <main>
-      <FinanceHeader />
-      <Testimonial />
+      <FinanceHero />
+      <FinanceUseCases />
       <Walkthrough />
-      {/* <FunFact /> */}
-      {/* <Integration /> */}
-      {/* <CTA /> */}
-      {/* <Testimonial /> */}
-      {/* <Pricing /> */}
     </main>
   );
 }

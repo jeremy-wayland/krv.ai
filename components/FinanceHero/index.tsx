@@ -1,7 +1,6 @@
 import Image from "next/image";
-// import MoverLight from "./animation";
 
-export default function FinanceHeader() {
+export default function FinanceHero() {
   return (
     <main>
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
@@ -50,12 +49,6 @@ export default function FinanceHeader() {
 
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5" style={{ height: "400px" }}>
-                {/* <div className="h-full w-full dark:hidden">
-                  <MoverLight />
-                </div> */}
-                {/* <div className="hidden dark:block">
-                    <MoverDark />
-                  </div> */}
                 <Image
                   src="/images/features/understandFitDark.svg"
                   alt="About"

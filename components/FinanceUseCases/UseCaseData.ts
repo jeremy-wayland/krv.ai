@@ -6,9 +6,9 @@ import portfolio from "@/public/images/finance/portfolio.svg";
 import portfolioDark from "@/public/images/finance/portfolioDark.svg";
 import regulation from "@/public/images/finance/regulation.svg";
 import regulationDark from "@/public/images/finance/regulationDark.svg";
-import { Testimonial } from "@/types/testimonial";
+import { UseCase } from "@/types/usecase";
 
-export const testimonialData: Testimonial[] = [
+export const UseCaseData: UseCase[] = [
   {
     id: 1,
     name: "Dynamic Portfolio Risk Mapping",
