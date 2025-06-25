@@ -66,7 +66,7 @@ const generateBackgroundElements = (rng) => {
   return { BG_NODES, BG_EDGES };
 };
 
-const AnimatedKnowledgeGraph = () => {
+const AnimatedKnowledgeGraphLight = () => {
   const svgRef = useRef();
   const edgePaths = useRef([]);
   const bgEdgesRef = useRef([]);
@@ -250,4 +250,4 @@ const AnimatedKnowledgeGraph = () => {
   );
 };
 
-export default AnimatedKnowledgeGraph;
+export default AnimatedKnowledgeGraphLight;

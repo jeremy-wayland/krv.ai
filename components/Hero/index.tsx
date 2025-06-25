@@ -1,6 +1,6 @@
 "use client";
-import MoverLight from "@/animations/animation-light";
-import MoverDark from "@/animations/animation-dark";
+import AnimatedKnowledgeGraphLight from "@/animations/kg-light";
+import AnimatedKnowledgeGraphDark from "@/animations/kg-dark";
 
 const Hero = () => {
   return (
@@ -39,10 +39,10 @@ const Hero = () => {
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
                 <div className="h-full w-full dark:hidden">
-                  <MoverLight />
+                  <AnimatedKnowledgeGraphLight />
                 </div>
                 <div className="hidden dark:block">
-                  <MoverDark />
+                  <AnimatedKnowledgeGraphDark />
                 </div>
               </div>
             </div>

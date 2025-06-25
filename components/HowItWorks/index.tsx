@@ -1,7 +1,8 @@
+//components/HowItWorks/index.tsx
 "use client";
 
 import { motion } from "framer-motion";
-import Mover from "./nodeBoundce";
+import MCMCGraphic from "@/animations/mcmcGraphic";
 
 const HowItWorks = () => {
   return (
@@ -30,11 +31,11 @@ const HowItWorks = () => {
             >
               {/* Dark theme version */}
               <div className="h-full w-full dark:hidden">
-                <Mover />
+                <MCMCGraphic />
               </div>
               {/* Light theme version */}
               <div className="hidden h-full w-full dark:block">
-                <Mover />
+                <MCMCGraphic />
               </div>
             </motion.div>
             <motion.div

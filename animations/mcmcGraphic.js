@@ -46,7 +46,7 @@ const START_POSITIONS = [
   { x: -30, y: 406, initialTargetId: 6 }, // Start left of Bottom-Left node
 ];
 
-const AnimatedMCMCGraph = () => {
+const MCMCGraphic = () => {
   const svgRef = useRef();
   // Store refs to the animated node elements
   const nodeRefs = useRef([]);
@@ -283,4 +283,4 @@ const AnimatedMCMCGraph = () => {
   );
 };
 
-export default AnimatedMCMCGraph;
+export default MCMCGraphic;
