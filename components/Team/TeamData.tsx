@@ -34,9 +34,9 @@ export const TeamData: TeamMember[] = [
     headshot: "/images/team/stu_hs.png",
     linkedInUrl: "https://www.linkedin.com/in/stuart-wayland-96b621253/",
     keyAchievements: [
-      "PhD Candidate – Quantum Algorithms",
-      "Ex-Software Developer, Encryptek",
-      "MS in Computer Science",
+      "PhD Candidate – Quantum Algorithms (UCSC)",
+      "Mentor at Quantifying Gerrymanderg Project",
+      "Ex-Software Developer at UCSB Allosphere",
     ],
     education: "",
   },
