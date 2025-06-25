@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import FinanceUseCases from "@/components/FinanceUseCases";
 import FinanceHero from "@/components/FinanceHero";
-import Walkthrough from "@/components/FinanceFeaturesTab";
+import Walkthrough from "@/components/FinanceWalkthrough";
 
 export const metadata: Metadata = {
   title: "Finance | Krv",

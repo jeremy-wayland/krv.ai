@@ -3,11 +3,9 @@ import Image from "next/image";
 import { useState } from "react";
 import FeaturesTabItem from "./FeaturesTabItem";
 import featuresTabData from "./featuresTabData";
-import SectionHeader from "../Common/SectionHeader";
-
 import { motion } from "framer-motion";
 
-const FeaturesTab = () => {
+const Walkthrough = () => {
   const [currentTab, setCurrentTab] = useState("tabOne");
 
   return (
@@ -145,4 +143,4 @@ const FeaturesTab = () => {
   );
 };
 
-export default FeaturesTab;
+export default Walkthrough;
