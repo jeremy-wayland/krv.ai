@@ -1,4 +1,4 @@
-export type Feature = {
+export type Panel = {
   id: number;
   icon: string;
   title: string;
