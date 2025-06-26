@@ -47,9 +47,9 @@ const START_POSITIONS = [
 ];
 
 const MCMCGraphic = () => {
-  const svgRef = useRef();
+  const svgRef = useRef<SVGSVGElement | null>(null);
   // Store refs to the animated node elements
-  const nodeRefs = useRef([]);
+  const nodeRefs = useRef<Array<SVGGElement | null>>([]);
   const rng = useRef(seedrandom("complex-mcmc-smooth")); // Use ref to keep same generator instance
 
   const [nodes, setNodes] = useState(() =>
@@ -265,7 +265,9 @@ const MCMCGraphic = () => {
         <g
           key={node.id}
           // Assign ref to the group element
-          ref={(el) => (nodeRefs.current[index] = el)}
+          ref={(el) => {
+            nodeRefs.current[index] = el;
+          }}
           // GSAP will control transform/opacity, no need to set here dynamically
         >
           <circle r="6" fill={node.color} />

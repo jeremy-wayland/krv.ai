@@ -1,6 +1,6 @@
 "use client";
-import AnimatedKnowledgeGraphLight from "@/animations/kg-light";
-import AnimatedKnowledgeGraphDark from "@/animations/kg-dark";
+import AnimatedKnowledgeGraphLight from "@/components/Animations/kg-light";
+import AnimatedKnowledgeGraphDark from "@/components/Animations/kg-dark";
 
 const Hero = () => {
   return (

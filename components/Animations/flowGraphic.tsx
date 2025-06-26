@@ -21,8 +21,8 @@ const EDGES = [
 ];
 
 const AnimatedFlowGraph = () => {
-  const svgRef = useRef();
-  const flowRefs = useRef([]);
+  const svgRef = useRef<SVGSVGElement | null>(null);
+  const flowRefs = useRef<(SVGGElement | null)[]>([]);
 
   useEffect(() => {
     const createFlowAnimation = (element) => {
@@ -115,7 +115,9 @@ const AnimatedFlowGraph = () => {
       {[...Array(3)].map((_, i) => (
         <g
           key={i}
-          ref={(el) => (flowRefs.current[i] = el)}
+          ref={(el) => {
+            flowRefs.current[i] = el;
+          }}
           transform={`translate(${NODES[0].x},${NODES[0].y})`}
         >
           <circle r="2" fill={COLORS.FLOW} />

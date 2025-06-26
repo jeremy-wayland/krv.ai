@@ -43,25 +43,31 @@ const generateBackgroundElements = (rng) => {
     type: "BACKGROUND",
   }));
 
-  const BG_EDGES = Array.from({ length: 30 }).map((_, i) => {
+  const BG_EDGES: BgEdge[] = Array.from({ length: 30 }).map((_, i) => {
     const fromIndex = Math.floor(rng(i + 200) * BG_NODES.length);
     const toIndex = Math.floor(rng(i + 300) * BG_NODES.length);
-    return [
-      BG_NODES[fromIndex % BG_NODES.length].id,
-      BG_NODES[toIndex % BG_NODES.length].id,
-    ];
+    // Ensure both indices are not the same and always return a tuple of two numbers
+    const fromId = BG_NODES[fromIndex % BG_NODES.length].id;
+    let toId = BG_NODES[toIndex % BG_NODES.length].id;
+    if (fromId === toId) {
+      toId = BG_NODES[(toIndex + 1) % BG_NODES.length].id;
+    }
+    return [fromId, toId] as BgEdge;
   });
 
   return { BG_NODES, BG_EDGES };
 };
 
+type BgNode = { id: number; x: number; y: number; type: string };
+type BgEdge = [number, number];
+
 const AnimatedKnowledgeGraphDark = () => {
-  const svgRef = useRef();
-  const edgePaths = useRef([]);
-  const bgEdgesRef = useRef([]);
+  const svgRef = useRef<SVGSVGElement | null>(null);
+  const edgePaths = useRef<SVGPathElement[]>([]);
+  const bgEdgesRef = useRef<SVGLineElement[]>([]);
   const [isClient, setIsClient] = useState(false);
-  const [BG_NODES, setBG_NODES] = useState([]);
-  const [BG_EDGES, setBG_EDGES] = useState([]);
+  const [BG_NODES, setBG_NODES] = useState<BgNode[]>([]);
+  const [BG_EDGES, setBG_EDGES] = useState<BgEdge[]>([]);
 
   useEffect(() => {
     setIsClient(true);
@@ -137,10 +143,13 @@ const AnimatedKnowledgeGraphDark = () => {
       {BG_EDGES.map(([from, to], i) => {
         const start = BG_NODES.find((n) => n.id === from);
         const end = BG_NODES.find((n) => n.id === to);
+        if (!start || !end) return null;
         return (
           <line
             key={`bg-edge-${i}`}
-            ref={(el) => (bgEdgesRef.current[i] = el)}
+            ref={(el) => {
+              if (el) bgEdgesRef.current[i] = el;
+            }}
             x1={start.x}
             y1={start.y}
             x2={end.x}
@@ -169,12 +178,15 @@ const AnimatedKnowledgeGraphDark = () => {
       {EDGES.map(([fromId, toId], i) => {
         const from = NODES.find((n) => n.id === fromId);
         const to = NODES.find((n) => n.id === toId);
+        if (!from || !to) return null;
         const path = `M${from.x},${from.y} Q${(from.x + to.x) / 2} ${from.y}, ${to.x},${to.y}`;
 
         return (
           <path
             key={`edge-${i}`}
-            ref={(el) => (edgePaths.current[i] = el)}
+            ref={(el) => {
+              if (el) edgePaths.current[i] = el;
+            }}
             d={path}
             stroke={COLORS.EDGE}
             strokeWidth="3"

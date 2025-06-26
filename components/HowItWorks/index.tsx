@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import MCMCGraphic from "@/animations/mcmcGraphic";
+import MCMCGraphic from "@/components/Animations/mcmcGraphic";
 
 const HowItWorks = () => {
   return (
