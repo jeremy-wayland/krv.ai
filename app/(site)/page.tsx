@@ -1,20 +1,13 @@
 import { Metadata } from "next";
-import Hero from "@/components/Hero";
-// import Brands from "@/components/Brands";
-import Feature from "@/components/Features";
-import About from "@/components/About";
-// import FunFact from "@/components/FunFact";
-// import Integration from "@/components/Integration";
-// import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
-// import Pricing from "@/components/Pricing";
+import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
 import Contact from "@/components/Contact";
-// import Team from "@/components/Team";
-// import Testimonial from "@/components/Testimonial";
+import WhatWeBring from "@/components/WhatWeBring";
 
 export const metadata: Metadata = {
-  title: "Krv",
-  description: "Krv Analytics",
+  title: "Welcome to Krv",
+  description: "Wesite for Krv Analytics, LLC.",
   // other metadata
 };
 
@@ -22,18 +15,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <Brands /> */}
-      <Feature />
-      <About />
-      {/* <FeaturesTab /> */}
-      {/* <FunFact /> */}
-      {/* <Integration /> */}
-      {/* <CTA /> */}
+      <WhatWeBring />
+      <HowItWorks />
       <FAQ />
-      {/* <Testimonial /> */}
-      {/* <Pricing /> */}
       <Contact />
-      {/* <Blog /> */}
     </main>
   );
 }

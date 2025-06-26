@@ -1,11 +1,10 @@
 // components/Team/TeamItem.tsx
-
 "use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { TeamMember } from "@/types/blog";
+import { TeamMember } from "@/types/team";
 
 // A simple checkmark icon for achievements
 const AchievementIcon = () => (

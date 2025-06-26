@@ -1,238 +1,91 @@
+//components/About/index.tsx
 "use client";
 
+import AboutSideBar from "./AboutSideBar";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-// import Mover from "@/images/about/moveTest";
-import Mover from "./nodeBoundce";
+export default function AboutInfo() {
+  const [selectedSection, setSelectedSection] =
+    useState<"Current Projects">("Current Projects");
 
-const About = () => {
   return (
     <>
-      {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
-        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
+      <motion.div
+        variants={{
+          hidden: {
+            opacity: 0,
+            x: -20,
+          },
 
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="animate_top rounded-lg p-4 pb-9 shadow-solid-8 dark:bg-blacksection md:w-1/2" // <--- ADD THIS CLASS HERE
-            >
-              {/* Dark theme version */}
-              <div className="h-full w-full dark:hidden">
-                <Mover />
-              </div>
-              {/* Light theme version */}
-              <div className="hidden h-full w-full dark:block">
-                <Mover />
-              </div>
-
-              {/* <Image
-                src="/images/about/about-dark-01.svg"
-                alt="About"
-                className="hidden dark:block"
-                fill
-              /> */}
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right md:w-1/2"
-            >
-              <span className="font-medium uppercase text-black dark:text-white">
-                <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
-                  New
-                </span>{" "}
-                Our Secret Sauce
-              </span>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Custom Workflows {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  On Demand
-                </span>
-              </h2>
-              <p>
-                No-code tools (n8n and Langflow) are like a fully stocked
-                kitchen—you have all the ingredients and tools, but you still
-                need to cook the meal yourself.
-                <br />
-                <span style={{ display: "block", height: "0.5em" }}></span>
-                We're building the private chef of data workflows: just tell us
-                what you want to eat, and our smart chef handles
-                everything—selecting ingredients, cooking, and serving—so you
-                don't have to lift a finger.
-              </p>
-
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    01
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Representation Learning
-                  </h3>
-                  <p>
-                    We develop a deep understanding of your infrastructure, your
-                    data types, systems, and how they interconnect, for
-                    meaningful analysis. Think of it like learning the terrain
-                    before building roads: we ensure preprocessing and data
-                    engineering allign with downstream goals.
-                  </p>
+          visible: {
+            opacity: 1,
+            x: 0,
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
+      >
+        <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
+          <div className="container mx-auto">
+            <div className="-mx-4 flex flex-wrap">
+              <div className="w-full px-4 lg:w-1/4">
+                <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
+                  <ul className="space-y-2">
+                    <AboutSideBar
+                      selectedSection={selectedSection}
+                      setSelectedSection={setSelectedSection}
+                    />
+                  </ul>
                 </div>
               </div>
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    02
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Generative Graph Modeling
-                  </h3>
-                  <p>
-                    We model agentic workflows as directed graphs. Using
-                    diffusion-based generative models, we spin up dynamic
-                    workflows from your data stack in response to natural
-                    language queries. These graph models guide agent behavior
-                    and integrate seamlessly with no-code orchestration
-                    platforms.
-                  </p>
+
+              <div className="w-full px-4 lg:w-3/4">
+                <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
+                  {selectedSection === "Current Projects" && (
+                    <>
+                      <h1>On the Horizon</h1>
+                      <h5>Jobba: AI-Powered Recruiting</h5>
+                      <p className="text-body-color dark:text-body-color-dark text-base">
+                        We're excited to announce that a live version of our
+                        AI-powered recruiting tool will be going live for a
+                        client in May of 2025! This solution transforms raw data
+                        into actionable insights, speeding up the search for top
+                        talent and reducing the typical recruiting challenges.
+                        With our tool, organizations can make better hiring
+                        decisions—fast, efficient, and smart.
+                        <br />
+                        <br />
+                        Interested in learning more? Contact us to find out how
+                        our AI recruiting solution can help you streamline your
+                        hiring process.
+                      </p>
+                      <h5>
+                        Enhancing UTI Risk Prediction with In-Room Analytics
+                      </h5>
+                      <p className="text-body-color dark:text-body-color-dark text-base">
+                        An in-room analytics application is being developed to
+                        predict urinary tract infection (UTI) risk in real time
+                        for children with vesicoureteral reflux (VUR). Virtual
+                        patient sampling and topological representation learning
+                        are employed to generate accurate, actionable insights
+                        from diverse patient data—enhancing risk predictions and
+                        addressing missing data. This innovative tool enables
+                        clinicians to make faster, more informed decisions at
+                        the point of care, with a robust model capable of
+                        delivering high accuracy across multiple years of
+                        patient data.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* <!-- ===== About End ===== --> */}
-
-      {/* <!-- ===== About Two Start ===== --> */}
-      {/* <section>
-        <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-1/2"
-            >
-              <h4 className="font-medium uppercase text-black dark:text-white">
-                Stear Clear Of
-              </h4>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Data {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Overload
-                </span>
-              </h2>
-              <p>
-                Traditional tools drown you in information without making sense
-                of it. Our tools doesn’t just surface patterns—they understand
-                relationships, trends, and context, turning raw data into clear,
-                actionable insights.
-              </p>
-              <br />
-              <p>
-                Gone are the days of trying to solve a massive puzzle with
-                thousands of scattered pieces. Instead of guessing where they
-                fit, we assemble the big picture for you—so you see the whole
-                story instantly. overload.
-              </p>
-              <div>
-                <a
-                  href="/support"
-                  className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
-                >
-                  <span className="duration-300 group-hover:pr-2">
-                    Know More
-                  </span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="currentColor"
-                  >
-                    <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-                  </svg>
-                </a>
-              </div>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
-              <Image
-                src="./images/about/about-light-02.svg"
-                alt="About"
-                className="dark:hidden"
-                fill
-              />
-              <Image
-                src="./images/about/about-dark-02.svg"
-                alt="About"
-                className="hidden dark:block"
-                fill
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
-      {/* <!-- ===== About Two End ===== --> */}
+        </section>
+      </motion.div>
     </>
   );
-};
-
-export default About;
+}

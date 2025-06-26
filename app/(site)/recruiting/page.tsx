@@ -1,30 +1,22 @@
-// import Brands from "@/components/Brands";
-// import FunFact from "@/components/FunFact";
-// import Pricing from "@/components/Pricing";
-
 import { Metadata } from "next";
-import CTA from "@/components/CTA";
-import Integration from "@/components/Integration";
-import FeaturesTab from "@/components/RecruitingFeaturesTab";
-import RecruiterHeader from "@/components/RecruitingSubpage";
+import Reachout from "@/components/RecruitmentReachout";
+import Integrations from "@/components/RecruitmentIntegrations";
+import RecruiterHero from "@/components/RecruitmentHero";
+import Walkthrough from "@/components/RecruitmentWalkthrough";
 
 export const metadata: Metadata = {
-  title: "Krv",
-  description: "Krv Analytics",
+  title: "Recruiting | Krv",
+  description:
+    "Krv Recruiting Page - Explore our features and integrations for recruiters.",
   // other metadata
 };
-export default function Home() {
+export default function RecruitmentPage() {
   return (
     <main>
-      <RecruiterHeader />
-
-      <FeaturesTab />
-      {/* <FunFact /> */}
-      <Integration />
-      <CTA />
-      {/* <Brands /> */}
-      {/* <Testimonial /> */}
-      {/* <Pricing /> */}
+      <RecruiterHero />
+      <Walkthrough />
+      <Integrations />
+      <Reachout />
     </main>
   );
 }

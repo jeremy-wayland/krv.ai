@@ -1,12 +1,12 @@
 // app/(site)/team/page.tsx
 
-import { TeamGrid } from "@/components/Team/TeamGrid"; // Import the new client component
 import { Metadata } from "next";
+import { Team } from "@/components/Team";
 
 export const metadata: Metadata = {
-  title: "Our Team - The Minds Behind the Mission",
+  title: "Team | Krv",
   description:
-    "Meet the visionary founders dedicated to solving the future's biggest challenges. Our expertise in AI, quantum computing, and scalable systems sets us apart.",
+    "Meet the founders dedicated to solving the future's biggest challenges. Our expertise in AI, quantum computing, and scalable systems sets us apart.",
   // other metadata
 };
 
@@ -30,7 +30,7 @@ const TeamPage = () => {
           </div>
 
           <div className="mt-16 xl:mt-20">
-            <TeamGrid />
+            <Team />
           </div>
         </div>
       </section>

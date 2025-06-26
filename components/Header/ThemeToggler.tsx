@@ -1,5 +1,6 @@
-import { useTheme } from "next-themes";
+//components/Header/ThemeToggler.tsx
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();

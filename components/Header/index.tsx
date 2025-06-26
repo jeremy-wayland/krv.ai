@@ -153,13 +153,6 @@ const Header = () => {
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
-            {/* 
-            <Link
-              href="https://github.com/Krv-Analytics"
-              className="text-regular font-medium text-waterloo hover:text-primary"
-            >
-              Find us on GitHub
-            </Link> */}
 
             <Link
               href="https://github.com/Krv-Analytics"
@@ -173,7 +166,5 @@ const Header = () => {
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;
