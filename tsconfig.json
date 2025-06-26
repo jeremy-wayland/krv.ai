@@ -31,7 +31,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Animations/flowGraphic.js"
+    "components/Animations/flowGraphic.js",
+    "src/types/**/*"
   ],
   "exclude": ["node_modules"]
 }
