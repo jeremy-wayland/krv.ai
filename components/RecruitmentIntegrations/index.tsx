@@ -62,7 +62,7 @@ const Integrations = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-07.svg"
+                  src="./images/brand/linkedin-logo.svg"
                   alt="Brand"
                 />
               </div>
@@ -109,7 +109,7 @@ const Integrations = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-08.svg"
+                  src="./images/brand/bullhorn-logo.svg"
                   alt="Brand"
                 />
               </div>
@@ -158,7 +158,7 @@ const Integrations = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-09.svg"
+                  src="./images/brand/dice-logo.svg"
                   alt="Brand"
                 />
               </div>
@@ -226,7 +226,7 @@ const Integrations = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-10.svg"
+                  src="./images/brand/green-logo.svg"
                   alt="Brand"
                 />
               </div>
@@ -275,7 +275,7 @@ const Integrations = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-11.svg"
+                  src="./images/brand/purple-logo.svg"
                   alt="Brand"
                 />
               </div>
@@ -324,7 +324,7 @@ const Integrations = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-12.svg"
+                  src="./images/brand/gradient-logo.svg"
                   alt="Brand"
                 />
               </div>
