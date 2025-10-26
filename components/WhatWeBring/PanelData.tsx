@@ -6,7 +6,7 @@ const PanelData: Panel[] = [
     icon: "/images/icon/icon-04.svg", // speedometer
     title: "Deploy in Minutes, Not Months",
     description:
-      "Provision the full KRV stack directly into your cloud with a single Terraform command — no complex setup required.",
+      "Provision the full Krv stack directly into your cloud with a single Terraform command — no complex setup required.",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const PanelData: Panel[] = [
     icon: "/images/icon/icon-03.svg", // page / config icon
     title: "Seamless Data Integration",
     description:
-      "Easily link to live databases, data lakes, or APIs. KRV integrates securely with your existing storage and compute systems.",
+      "Easily link to live databases, data lakes, or APIs. Krv integrates securely with your existing storage and compute systems.",
   },
   {
     id: 4,
