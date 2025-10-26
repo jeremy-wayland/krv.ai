@@ -39,12 +39,13 @@ const menuData: Menu[] = [
       },
     ],
   },
-  {
-    id: 2.3,
-    title: "About",
-    newTab: false,
-    path: "/about",
-  },
+  // About temporarily hidden; keep for future re-enable
+  // {
+  //   id: 2.3,
+  //   title: "About",
+  //   newTab: false,
+  //   path: "/about",
+  // },
 
   {
     id: 2.1,

@@ -153,14 +153,16 @@ const Footer = () => {
                         Meet the Team
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/about"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        About
-                      </a>
-                    </li>
+                    {false && (
+                      <li>
+                        <a
+                          href="/about"
+                          className="mb-3 inline-block hover:text-primary"
+                        >
+                          About
+                        </a>
+                      </li>
+                    )}
                   </ul>
                 </motion.div>
 
