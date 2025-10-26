@@ -1,6 +1,5 @@
 "use client";
-import AnimatedKnowledgeGraphLight from "@/components/Animations/kg-light";
-import AnimatedKnowledgeGraphDark from "@/components/Animations/kg-dark";
+import SimpleFlow from "@/components/Animations/HeroFlow/SimpleFlow";
 import Scramble from "./TextScramble";
 
 const Hero = () => {
@@ -11,7 +10,6 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <Scramble />
-
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
                 The API for {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
@@ -31,11 +29,12 @@ const Hero = () => {
 
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
-                <div className="h-full w-full dark:hidden">
-                  <AnimatedKnowledgeGraphLight />
+                <div className="h-100 w-full dark:hidden">
+                  <SimpleFlow initialColor="#0f172a" />
                 </div>
+
                 <div className="hidden dark:block">
-                  <AnimatedKnowledgeGraphDark />
+                  <SimpleFlow initialColor="#60a5fa" />
                 </div>
               </div>
             </div>

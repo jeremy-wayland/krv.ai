@@ -10,6 +10,7 @@
     "generate-deck": "node tools/convert-deck.js"
   },
   "dependencies": {
+    "@react-spring/web": "^10.0.3",
     "@types/bcrypt": "^5.0.1",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.32",

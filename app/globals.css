@@ -125,3 +125,31 @@ pre {
 .active-tab {
   @apply bg-stroke text-black dark:bg-blackho dark:text-white;
 }
+.anchor_text {
+  --underline-ease-in: cubic-bezier(0.25, 1, 0.5, 1);
+  --underline-ease-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --underline-position-y: 100%;
+  --underline-size: 2px; /* thicker so it shows */
+  --underline-color: #000; /* default black, override with Tailwind color if needed */
+
+  display: inline-block; /* inline-block so background works */
+  text-decoration: none;
+  position: relative; /* for pseudo-element positioning */
+}
+
+.anchor_text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--underline-size);
+  width: 0;
+  background-color: var(--underline-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.anchor_text[data-state="in"]::after,
+.anchor_text:hover::after,
+.anchor_text:focus::after {
+  width: 100%;
+}
