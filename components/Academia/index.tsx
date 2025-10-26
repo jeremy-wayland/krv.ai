@@ -1,163 +1,42 @@
 //components/Academia/index.tsx
 "use client";
-import AcademicSidebar from "./AcademicSidebar";
-import { useState } from "react";
 
 export default function AcademicsInfo() {
-  const [selectedSection, setSelectedSection] = useState<
-    "about" | "coal" | "pending"
-  >("about");
-
   return (
-    <>
-      <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
-        <div className="container mx-auto">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 lg:w-1/4">
-              <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
-                <ul className="space-y-2">
-                  <AcademicSidebar
-                    selectedSection={selectedSection}
-                    setSelectedSection={setSelectedSection}
-                  />
-                </ul>
-              </div>
+    <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
+      <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+        <header className="mb-10 text-center">
+          <h1 className="mb-2 text-3xl font-bold text-black dark:text-white xl:text-4xl">
+            <span className="relative inline-block before:absolute before:bottom-1.5 before:left-0 before:-z-10 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">Academia</span>
+          </h1>
+          <p className="mt-2 text-slate-600 dark:text-slate-300">Research, collaborations, and technical explorations.</p>
+        </header>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
+          <article className="group rounded-xl bg-white dark:bg-gray-dark ring-1 ring-slate-200/70 dark:ring-slate-800/60 p-6 sm:p-8 flex flex-col transition-shadow hover:shadow-lg">
+            <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+              <a href="/academia/coal" className="hover:underline">
+                Strategies to Accelerate US Coal Power Phaseout Using Contextual Retirement Vulnerabilities
+              </a>
+            </h2>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">In collaboration with UCSB Environmental Studies & Bren School</p>
+            <p className="mt-4 line-clamp-4 leading-relaxed text-slate-700 dark:text-slate-300">
+              Coal power is now economically unviable, outpriced by renewables and burdened by rising operational costs. Our upcoming <em>Nature Energy</em> paper reveals how strategic, context-specific phaseouts can accelerate this transition equitably.
+            </p>
+            <div className="mt-5">
+              <a href="/academia/coal" className="inline-flex items-center gap-2 rounded-md bg-black px-3 py-2 text-sm font-medium text-white hover:bg-slate-700 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200">
+                Read post
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 5l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
             </div>
+          </article>
 
-            <div className="w-full px-4 lg:w-3/4">
-              <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                {selectedSection === "about" && (
-                  <>
-                    <h2>A Foothold in Academia</h2>
-
-                    <h5> Model Development</h5>
-                    <p>
-                      We've had the privilege of working with academic partners
-                      on joint studies and technical model frameworks. These
-                      collaborations allow us to accelerate innovation, validate
-                      new approaches, and continuously push the boundary of
-                      what's possible.
-                    </p>
-
-                    <h5>Bringing Academic Techniques into Industry</h5>
-
-                    <p>
-                      We don't just read the latest academic papers — we help
-                      write them. Our mission is to ensure that promising new
-                      techniques don't just stay within journals, but are used
-                      by companies, agencies, and energy practitioners to make
-                      better, faster, and more informed decisions. We're proud
-                      to play a small role in helping high-potential academic
-                      work find a larger stage.
-                    </p>
-
-                    <h6>
-                      If you're a researcher, student, or faculty member working
-                      on something exciting, we'd love to hear from you. Let's
-                      turn great ideas into real-world impact — together.
-                    </h6>
-                  </>
-                )}
-                {selectedSection === "coal" && (
-                  <>
-                    <h2>
-                      Strategies to Accelerate US Coal Power Phaseout Using
-                      Contextual Retirement Vulnerabilities
-                    </h2>
-                    <h6>
-                      {" "}
-                      In collaboration with the UCSB Environmental Studies
-                      Department and Bren School of Environmental Science and
-                      Management
-                    </h6>
-                    <br></br>
-                    <p>
-                      Coal power is now economically unviable, outpriced by
-                      renewables and burdened by rising operational costs. But
-                      the stakes go deeper: aging plants disproportionately harm
-                      disadvantaged communities through toxic emissions, while
-                      locking utilities into stranded assets. Retiring coal
-                      isn’t just about climate goals—it’s a financial, health,
-                      and justice imperative. Our upcoming{" "}
-                      <em>Nature Energy</em> paper reveals how strategic,
-                      context-specific phaseouts can accelerate this transition
-                      equitably.
-                    </p>
-                    <div className="flex h-auto min-h-[550px] w-full flex-col gap-4 md:flex-row">
-                      <iframe
-                        src="/coal/retirementMap.html"
-                        title="Coal Map"
-                        className="flex-1 rounded-lg"
-                      />
-                    </div>
-                    <br></br>
-                    <h3>
-                      Mapping Coal's <i>Contextual Retirement Vulnerability</i>:
-                      A New Lens for Phaseouts
-                    </h3>
-                    <p>
-                      Using graph theory and topological data analysis, we
-                      classify the US coal fleet into 8 distinct groups with
-                      unique retirement drivers. Our novel “contextual
-                      retirement vulnerability” score quantifies how close
-                      non-retiring plants are to early closures—exposing which
-                      are most at risk from regulatory, economic, or social
-                      pressures.
-                    </p>
-                    <p>
-                      This analysis leveraged{" "}
-                      <a
-                        href="https://github.com/Krv-Analytics/Thema"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        <strong>THEMA</strong>
-                      </a>
-                      , our topological hyperparameter framework that maps
-                      complex data landscapes to reveal actionable insights.
-                      THEMA doesn’t just crunch numbers—it identifies which
-                      parameters and preprocessing steps uncover the most
-                      trustworthy, impactful patterns. Think of it as a compass
-                      for navigating unsupervised learning’s chaos.
-                    </p>
-
-                    <p>
-                      <em>
-                        {" "}
-                        Stay tuned for the paper’s publication to explore
-                        reproducibility scripts and full methodology!
-                        <a
-                          href="https://krv-analytics.github.io/Thema/#"
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          {" "}
-                          <strong>(See the THEMA docs!)</strong>{" "}
-                        </a>{" "}
-                      </em>
-                    </p>
-                    <div className="flex h-auto min-h-[480px] w-full flex-col gap-4 md:flex-row">
-                      <iframe
-                        src="/coal/groupProxMap.html"
-                        title="Coal Map"
-                        className="flex-1 rounded-lg"
-                      />
-                    </div>
-                  </>
-                )}
-
-                {selectedSection === "pending" && (
-                  <>
-                    <h2>Stay Tuned...</h2>
-                    <p>More academic collaborations coming soon!</p>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
+          <article className="rounded-xl bg-white/60 dark:bg-slate-900/40 ring-1 ring-slate-200/70 dark:ring-slate-800/60 p-6 sm:p-8">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">More coming soon…</h3>
+            <p className="mt-2 text-slate-600 dark:text-slate-300">Academic collaborations, reproducibility write-ups, and technical deep dives.</p>
+          </article>
         </div>
-      </section>
-      {/* <Brands /> */}
-    </>
+      </div>
+    </section>
   );
 }
