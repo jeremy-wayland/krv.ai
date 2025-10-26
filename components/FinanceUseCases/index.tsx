@@ -21,7 +21,7 @@ const FinanceUseCases = () => {
             <SectionHeader
               headerInfo={{
                 title: `EXAMPLE`,
-                subtitle: `ML Models`,
+                subtitle: `Unsupervised Models`,
                 description: `Drives smarter decision-making through real-time, data-driven insights.`,
               }}
             />

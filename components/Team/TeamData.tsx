@@ -23,8 +23,8 @@ export const TeamData: TeamMember[] = [
     linkedInUrl: "https://www.linkedin.com/in/sidney-gathrid/",
     keyAchievements: [
       "Ex-Heliogen (AI + Solar Thermal Startup)",
-      "Builder of Fast, Scalable Data Infrastructure",
-      "Clean Energy Engineer with Startup DNA",
+      "Systems Simulation + Data Engineer",
+      "Clean Energy Background with Startup DNA",
     ],
     education: "",
   },

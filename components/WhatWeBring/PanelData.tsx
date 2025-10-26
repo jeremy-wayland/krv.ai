@@ -4,7 +4,7 @@ const PanelData: Panel[] = [
   {
     id: 1,
     icon: "/images/icon/icon-04.svg", // speedometer
-    title: "Deploy in Minutes, Not Months",
+    title: "Live Models, Running in Real Time",
     description:
       "Provision the full Krv stack directly into your cloud with a single Terraform command — no complex setup required.",
   },

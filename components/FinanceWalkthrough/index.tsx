@@ -62,7 +62,7 @@ const Walkthrough = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Reading Our Graphs
+                  Graph-Representations
                 </button>
               </div>
             </div>

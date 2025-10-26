@@ -15,8 +15,9 @@ const HealthCarePage = () => {
           Coming Soon!
         </h2>
         <p className="mb-7.5">
-          Great things are on the horizon. We're working hard to add new content
-          and features. Check back soon for updates!
+          Great things are on the horizon. We're working hard on EHR
+          integrations + HIPPA-compliant, secure deployment within hospital
+          systems. Check back soon for updates!
         </p>
 
         <div className="flex items-center gap-6">
