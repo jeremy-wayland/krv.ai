@@ -9,6 +9,12 @@ export default function Terminal() {
   const [copied, setCopied] = useState(false);
   const [scrambleText, setScrambleText] = useState("");
   const typeIndexRef = useRef(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [isInView, setIsInView] = useState(true);
+  const charTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lineAdvanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
   const scrambleIntervalRef = useRef<ReturnType<typeof setInterval> | null>(
     null,
   );
@@ -122,7 +128,41 @@ export default function Terminal() {
     }, 30);
   };
 
+  // Track if the terminal is in the viewport to pause/resume animation
   useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) {
+      // Pause timers and intervals while offscreen to prevent layout shifts
+      if (scrambleIntervalRef.current) {
+        clearInterval(scrambleIntervalRef.current);
+      }
+      if (charTimeoutRef.current) {
+        clearTimeout(charTimeoutRef.current);
+        charTimeoutRef.current = null;
+      }
+      if (lineAdvanceTimeoutRef.current) {
+        clearTimeout(lineAdvanceTimeoutRef.current);
+        lineAdvanceTimeoutRef.current = null;
+      }
+      setIsTyping(false);
+      return;
+    }
     if (currentLineIndex >= terminalLines.length) {
       const resetTimer = setTimeout(() => {
         setCurrentLineIndex(0);
@@ -148,10 +188,10 @@ export default function Terminal() {
         typeIndexRef.current++;
 
         const charDelay = currentLine.type === "command" ? 30 : 10;
-        setTimeout(typeChar, charDelay);
+        charTimeoutRef.current = setTimeout(typeChar, charDelay);
       } else {
         setIsTyping(false);
-        setTimeout(() => {
+        lineAdvanceTimeoutRef.current = setTimeout(() => {
           setCurrentLineIndex((prev) => prev + 1);
         }, currentLine.delay);
       }
@@ -163,8 +203,16 @@ export default function Terminal() {
       if (scrambleIntervalRef.current) {
         clearInterval(scrambleIntervalRef.current);
       }
+      if (charTimeoutRef.current) {
+        clearTimeout(charTimeoutRef.current);
+        charTimeoutRef.current = null;
+      }
+      if (lineAdvanceTimeoutRef.current) {
+        clearTimeout(lineAdvanceTimeoutRef.current);
+        lineAdvanceTimeoutRef.current = null;
+      }
     };
-  }, [currentLineIndex]);
+  }, [currentLineIndex, isInView]);
 
   const copyToClipboard = () => {
     const textToCopy = terminalLines
@@ -179,7 +227,10 @@ export default function Terminal() {
   const currentLine = terminalLines[currentLineIndex];
   const displayText = scrambleText || displayedText;
   return (
-    <div className="font-mono relative z-50 w-full overflow-hidden bg-white text-sm dark:bg-black">
+    <div
+      ref={containerRef}
+      className="font-mono relative z-50 w-full overflow-hidden bg-white text-sm dark:bg-black"
+    >
       <div
         className="grid grid-cols-3 items-center px-3 py-2"
         style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}
