@@ -1,5 +1,6 @@
 //components/Academia/index.tsx
 "use client";
+import Underline from "../Animations/UnderlineAnchor";
 
 export default function AcademicsInfo() {
   return (
@@ -19,17 +20,24 @@ export default function AcademicsInfo() {
         <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
           <article className="dark:bg-gray-dark group flex flex-col rounded-xl bg-white p-6 ring-1 ring-slate-200/70 transition-shadow hover:shadow-lg dark:ring-slate-800/60 sm:p-8">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
-              <a href="/academia/coal" className="hover:underline">
+              <Underline
+                href="/academia/coal"
+                style={
+                  {
+                    "--underline-size": "2.5px",
+                  } as React.CSSProperties
+                }
+              >
                 Strategies to Accelerate US Coal Power Phaseout Using Contextual
                 Retirement Vulnerabilities
-              </a>
+              </Underline>
             </h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
               In collaboration with UCSB Environmental Studies & Bren School
             </p>
             <p className="mt-4 line-clamp-4 leading-relaxed text-slate-700 dark:text-slate-300">
               Coal power is now economically unviable, outpriced by renewables
-              and burdened by rising operational costs. Our upcoming{" "}
+              and burdened by rising operational costs. Our{" "}
               <em>Nature Energy</em> paper reveals how strategic,
               context-specific phaseouts can accelerate this transition
               equitably.

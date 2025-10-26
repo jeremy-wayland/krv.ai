@@ -7,7 +7,7 @@ export default function CoalPost() {
   const [expanded, setExpanded] = useState(false);
   const [activeViz, setActiveViz] = useState<
     "retirement" | "groups" | "network"
-  >("retirement");
+  >("network");
   const frameBase = expanded
     ? "h-[760px] md:h-[820px]"
     : "h-[480px] md:h-[600px]";
@@ -138,6 +138,16 @@ export default function CoalPost() {
             {/* Removed snap/free toggle; layout is always force-directed now */}
           </div>
           <div className="mt-4 w-full overflow-hidden rounded-xl ring-1 ring-slate-200/70 dark:ring-slate-800/60">
+            {activeViz === "network" && (
+              <CoalNetworkGraph
+                dataUrl="/coal/coalPlant_graph.json"
+                height={parseInt(
+                  frameBase.match(/h-\[(\d+)px\]/)?.[1] || "600",
+                  10,
+                )}
+                freeLayout={freeLayout}
+              />
+            )}
             {activeViz === "retirement" && (
               <iframe
                 src="/coal/retirementMap.html"
@@ -150,16 +160,6 @@ export default function CoalPost() {
                 src="/coal/groupProxMap.html"
                 title="Coal Group Map"
                 className={`w-full ${frameBase}`}
-              />
-            )}
-            {activeViz === "network" && (
-              <CoalNetworkGraph
-                dataUrl="/coal/coalPlant_graph.json"
-                height={parseInt(
-                  frameBase.match(/h-\[(\d+)px\]/)?.[1] || "600",
-                  10,
-                )}
-                freeLayout={freeLayout}
               />
             )}
           </div>

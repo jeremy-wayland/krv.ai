@@ -1,5 +1,13 @@
 "use client";
-import { CSSProperties, MouseEvent, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+  CSSProperties,
+  MouseEvent,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import Fiber from "./fiber";
 
 type Props = {
@@ -17,14 +25,21 @@ const nodeStyle: CSSProperties = {
 
 export default function SimpleFlow({ initialColor = "#111" }: Props) {
   // pick a shape deterministically so it doesn't flip during hydration
-  const shape = useMemo(() => (Math.random() > 0.5 ? "cube" : "tetrahedron"), []);
+  const shape = useMemo(
+    () => (Math.random() > 0.5 ? "cube" : "tetrahedron"),
+    [],
+  );
   const containerRef = useRef<HTMLDivElement | null>(null);
   const nSrcSysRef = useRef<HTMLDivElement | null>(null);
   const nEngineRef = useRef<HTMLDivElement | null>(null);
   const nModelsRef = useRef<HTMLDivElement | null>(null);
   const nApiRef = useRef<HTMLDivElement | null>(null);
-  const draggingRef = useRef<{ id: string; dx: number; dy: number } | null>(null);
-  const [positions, setPositions] = useState<Record<string, { x: number; y: number }>>({});
+  const draggingRef = useRef<{ id: string; dx: number; dy: number } | null>(
+    null,
+  );
+  const [positions, setPositions] = useState<
+    Record<string, { x: number; y: number }>
+  >({});
   const [paths, setPaths] = useState<Array<{ d: string }>>([]);
 
   const [ready, setReady] = useState(false);
@@ -40,19 +55,29 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       // Vertical stack, compact
       const vGap = 24;
       // Standardize text-only cards to same width; enlarge engine
-      const srcW = 260, srcH = 60;
-      const engW = 420, engH = 240; // base est; will use real height if available
-      const mdlW = 260, mdlH = 60;
-      const apiW = 260, apiH = 60;
+      const srcW = 260,
+        srcH = 60;
+      const engW = 420,
+        engH = 240; // base est; will use real height if available
+      const mdlW = 260,
+        mdlH = 60;
+      const apiW = 260,
+        apiH = 60;
 
-      const engRealH = (nEngineRef.current?.offsetHeight ?? (engH + 40));
-      const extraGap = 24; // additional breathing room between engine and models
+      const engRealH = nEngineRef.current?.offsetHeight ?? engH + 40;
+      const extraGap = 12;
 
       setPositions({
         srcSys: { x: centerX - srcW / 2, y: topY },
         engine: { x: centerX - engW / 2, y: topY + srcH + vGap },
-        models: { x: centerX - mdlW / 2, y: topY + srcH + vGap + engRealH + vGap + extraGap },
-        api: { x: centerX - apiW / 2, y: topY + srcH + vGap + engRealH + vGap + extraGap + mdlH + vGap },
+        models: {
+          x: centerX - mdlW / 2,
+          y: topY + srcH + vGap + engRealH + vGap + extraGap,
+        },
+        api: {
+          x: centerX - apiW / 2,
+          y: topY + srcH + vGap + engRealH + vGap + extraGap + mdlH + vGap,
+        },
       });
       setReady(true);
     };
@@ -78,8 +103,14 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       const mdlB = mdl.getBoundingClientRect();
       const apiB = api.getBoundingClientRect();
 
-      const bottomCenter = (r: DOMRect) => ({ x: r.left - cb.left + r.width / 2, y: r.top - cb.top + r.height });
-      const topCenter = (r: DOMRect) => ({ x: r.left - cb.left + r.width / 2, y: r.top - cb.top });
+      const bottomCenter = (r: DOMRect) => ({
+        x: r.left - cb.left + r.width / 2,
+        y: r.top - cb.top + r.height,
+      });
+      const topCenter = (r: DOMRect) => ({
+        x: r.left - cb.left + r.width / 2,
+        y: r.top - cb.top,
+      });
 
       const pSys = bottomCenter(srcSysB);
       const pEngTop = topCenter(engB);
@@ -88,7 +119,11 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       const pMdlBottom = bottomCenter(mdlB);
       const pApiTop = topCenter(apiB);
 
-      const curve = (a: { x: number; y: number }, b: { x: number; y: number }, bend = 0) => {
+      const curve = (
+        a: { x: number; y: number },
+        b: { x: number; y: number },
+        bend = 0,
+      ) => {
         const dy = b.y - a.y;
         const cx1 = a.x + bend;
         const cy1 = a.y + Math.max(24, dy * 0.5);
@@ -156,7 +191,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
   return (
     <div
       ref={containerRef}
-      className="w-full h-[600px] lg:h-[550px] xl:h-[600px] relative"
+      className="relative h-[600px] w-full lg:h-[550px] xl:h-[600px]"
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
@@ -164,7 +199,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       {/* Node: Enterprise Systems */}
       <div
         ref={nSrcSysRef}
-        className="absolute select-none bg-white/60 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-700/60 text-slate-900 dark:text-slate-100 shadow-[0_6px_16px_rgba(2,6,23,0.12)]"
+        className="absolute select-none border border-slate-200/70 bg-white/60 text-slate-900 shadow-[0_6px_16px_rgba(2,6,23,0.12)] dark:border-slate-700/60 dark:bg-slate-900/40 dark:text-slate-100"
         style={{
           ...nodeStyle,
           width: 260,
@@ -183,7 +218,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       {/* Node: Hypergraph Data Engine (with canvas) */}
       <div
         ref={nEngineRef}
-        className="absolute select-none bg-white/60 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-700/60 text-slate-900 dark:text-slate-100 shadow-[0_6px_16px_rgba(2,6,23,0.12)]"
+        className="absolute select-none border border-slate-200/70 bg-white/60 text-slate-900 shadow-[0_6px_16px_rgba(2,6,23,0.12)] dark:border-slate-700/60 dark:bg-slate-900/40 dark:text-slate-100"
         style={{
           ...nodeStyle,
           width: 420,
@@ -194,8 +229,10 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
         }}
         onMouseDown={onMouseDown("engine")}
       >
-        <div className="mb-2 text-[13px] font-medium">Hypergraph Data Engine</div>
-        <div className="mb-[30px] mx-[30px] w-[calc(100%-60px)] h-[200px] rounded-lg overflow-hidden border border-slate-200/60 dark:border-slate-700/60 bg-gradient-to-br from-sky-400/5 to-pink-500/5">
+        <div className="mb-2 text-[13px] font-medium">
+          Hypergraph Data Engine
+        </div>
+        <div className="mx-[30px] mb-[30px] h-[200px] w-[calc(100%-60px)] overflow-hidden rounded-lg border border-slate-200/60 bg-gradient-to-br from-sky-400/5 to-pink-500/5 dark:border-slate-700/60">
           <Fiber color={initialColor} shape={shape} zoom={12} drift={2} />
         </div>
       </div>
@@ -203,7 +240,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       {/* Node: AI/ML Models */}
       <div
         ref={nModelsRef}
-        className="absolute select-none bg-white/60 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-700/60 text-slate-900 dark:text-slate-100 shadow-[0_6px_16px_rgba(2,6,23,0.12)]"
+        className="absolute select-none border border-slate-200/70 bg-white/60 text-slate-900 shadow-[0_6px_16px_rgba(2,6,23,0.12)] dark:border-slate-700/60 dark:bg-slate-900/40 dark:text-slate-100"
         style={{
           ...nodeStyle,
           width: 260,
@@ -220,7 +257,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
       {/* Node: API */}
       <div
         ref={nApiRef}
-        className="absolute select-none bg-white/60 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-700/60 text-slate-900 dark:text-slate-100 shadow-[0_6px_16px_rgba(2,6,23,0.12)]"
+        className="absolute select-none border border-slate-200/70 bg-white/60 text-slate-900 shadow-[0_6px_16px_rgba(2,6,23,0.12)] dark:border-slate-700/60 dark:bg-slate-900/40 dark:text-slate-100"
         style={{
           ...nodeStyle,
           width: 260,
@@ -242,7 +279,14 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
         style={{ opacity: ready ? 1 : 0 }}
       >
         <defs>
-          <marker id="sf-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <marker
+            id="sf-arrow"
+            markerWidth="6"
+            markerHeight="6"
+            refX="5"
+            refY="3"
+            orient="auto"
+          >
             <path d="M0,0 L6,3 L0,6 Z" fill="currentColor" />
           </marker>
         </defs>

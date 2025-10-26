@@ -10,7 +10,7 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "Industries",
+    title: "Initiatives",
     newTab: false,
     submenu: [
       // {
@@ -19,12 +19,6 @@ const menuData: Menu[] = [
       //   newTab: false,
       //   path: "/recruiting",
       // },
-      {
-        id: 36,
-        title: "Healthcare",
-        newTab: false,
-        path: "/healthcare",
-      },
       {
         id: 36,
         title: "Healthcare",
