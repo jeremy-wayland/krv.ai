@@ -24,7 +24,7 @@ export default function HeroScramble() {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % phrases.length);
       replay();
-    }, 7500);
+    }, 6000);
     return () => clearInterval(interval);
   }, [replay]);
 

@@ -16,6 +16,7 @@ const Hero = () => {
                   Enterprise AI.
                 </span>
               </h1>
+
               <p>
                 One protocol layer that abstracts enterprise data complexity so
                 AI systems deploy anywhere—<b>no migrations, no headaches</b>.
@@ -23,6 +24,7 @@ const Hero = () => {
                 advanced ML/AI.
                 <br />
                 <span style={{ display: "block", height: "0.5em" }}></span>
+                {/* <pre>Krv Labs</pre> */}
                 <em>Built by data engineers and PhDs.</em>
               </p>
             </div>

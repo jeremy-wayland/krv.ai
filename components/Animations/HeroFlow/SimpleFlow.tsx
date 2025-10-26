@@ -251,7 +251,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
         }}
         onMouseDown={onMouseDown("models")}
       >
-        <div className="text-[13px] font-medium">AI/ML Models</div>
+        <div className="text-[13px] font-medium">AI & ML Models</div>
       </div>
 
       {/* Node: API */}
@@ -268,7 +268,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
         }}
         onMouseDown={onMouseDown("api")}
       >
-        <div className="text-[13px] font-medium">API</div>
+        <div className="text-[13px] font-medium">API Endpoints</div>
       </div>
 
       {/* Curvy connectors */}

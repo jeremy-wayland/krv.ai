@@ -3,41 +3,45 @@ import { Panel } from "@/types/Panel";
 const PanelData: Panel[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-01.svg",
-    title: "Automatic Cleaning and Preprocessing",
-    description: "Save time, maximize usage, and stay correct.",
+    icon: "/images/icon/icon-04.svg", // speedometer
+    title: "Deploy in Minutes, Not Months",
+    description:
+      "Provision the full KRV stack directly into your cloud with a single Terraform command — no complex setup required.",
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
-    title: "Multimodal Data Handling",
-    description: "Regardless of your data's medium, we've got you covered.",
+    icon: "/images/icon/icon-06.svg", // cycle icon
+    title: "Your Data Stays Put. Always.",
+    description:
+      "We deploy entirely within your own environment. Models run where your data lives — behind your VPN and security perimeter.",
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
-    title: "Catalogue Data for Future Predictions",
+    icon: "/images/icon/icon-03.svg", // page / config icon
+    title: "Seamless Data Integration",
     description:
-      "Give you a leg up in predictive tasks via structured categorization.",
+      "Easily link to live databases, data lakes, or APIs. KRV integrates securely with your existing storage and compute systems.",
   },
   {
     id: 4,
-    icon: "/images/icon/icon-04.svg",
-    title: "Reliability Guarantees for Data Representation",
+    icon: "/images/icon/icon-02.svg", // stack icon
+    title: "Fully Automated ML Lifecycle",
     description:
-      "Decisions have impacts - our metrics ensure a trustworthy data journey.",
+      "Train, version, and deploy models through a self-orchestrating workflow — from data ingestion to inference endpoint.",
   },
   {
     id: 5,
-    icon: "/images/icon/icon-05.svg",
-    title: "Proprietary Graph Algorithms",
-    description: "Uncover hidden structures with topological insights.",
+    icon: "/images/icon/icon-01.svg", // bar chart
+    title: "Immutable, Reproducible, Auditable",
+    description:
+      "Every workflow and model build is containerized and logged with full lineage for compliance and governance.",
   },
   {
     id: 6,
-    icon: "/images/icon/icon-06.svg",
-    title: "Bias Detection and Benchmarking",
-    description: "Ensure your results are representative and reliable.",
+    icon: "/images/icon/icon-05.svg", // table
+    title: "Secure by Design",
+    description:
+      "Zero external calls. Zero data exfiltration. Just high-performance AI, fully contained within your infrastructure.",
   },
 ];
 
