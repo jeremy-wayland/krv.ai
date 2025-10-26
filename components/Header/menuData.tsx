@@ -13,23 +13,29 @@ const menuData: Menu[] = [
     title: "Industries",
     newTab: false,
     submenu: [
+      // {
+      //   id: 35,
+      //   title: "Recruiting",
+      //   newTab: false,
+      //   path: "/recruiting",
+      // },
       {
-        id: 35,
-        title: "Recruiting",
+        id: 36,
+        title: "Healthcare",
         newTab: false,
-        path: "/recruiting",
-      },
-      {
-        id: 35.1,
-        title: "Finance",
-        newTab: false,
-        path: "/finance",
+        path: "/healthcare",
       },
       {
         id: 36,
         title: "Healthcare",
         newTab: false,
         path: "/healthcare",
+      },
+      {
+        id: 35.1,
+        title: "Finance",
+        newTab: false,
+        path: "/finance",
       },
       {
         id: 36,
