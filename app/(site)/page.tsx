@@ -7,9 +7,23 @@ import WhatWeBring from "@/components/WhatWeBring";
 import FastDeploy from "@/components/FastDeploy";
 
 export const metadata: Metadata = {
-  title: "Welcome to Krv",
-  description: "Wesite for Krv Analytics, LLC.",
-  // other metadata
+  title: "Krv.ai",
+  description:
+    "One protocol layer that tames enterprise data complexity. Deploy anywhere with no migrations.",
+  openGraph: {
+    title: "Krv.ai",
+    description:
+      "One protocol layer that tames enterprise data complexity. Deploy anywhere with no migrations.",
+    url: "https://krv.ai/",
+    siteName: "Krv Analytics",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Krv Analytics — Enterprise AI Middleware",
+    description:
+      "One protocol layer that tames enterprise data complexity. Deploy anywhere with no migrations.",
+  },
 };
 
 export default function Home() {
