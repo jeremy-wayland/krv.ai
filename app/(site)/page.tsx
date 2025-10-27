@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Krv.ai",
   description:
     "One protocol layer that tames enterprise data complexity. Deploy anywhere with no migrations.",
+  metadataBase: new URL("https://krv.ai"),
   openGraph: {
     title: "Krv.ai",
     description:

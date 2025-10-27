@@ -1,7 +1,7 @@
 // app/(site)/opengraph-image.tsx
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // ensure broad compatibility for crawlers
 export const alt = "Krv Analytics — Enterprise AI Middleware";
 export const size = {
   width: 1200,
@@ -102,4 +102,3 @@ export default async function Image() {
     { ...size },
   );
 }
-

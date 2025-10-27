@@ -1,7 +1,7 @@
 // app/(site)/academia/coal/opengraph-image.tsx
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // ensure broad compatibility for crawlers
 export const alt =
   "Accelerating US Coal Phaseout - Data-driven framework published in Nature Energy";
 export const size = {
