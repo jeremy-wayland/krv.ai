@@ -164,6 +164,52 @@ export default function CoalPost() {
             )}
           </div>
           Figures based on Gathrid, et al. (2025) Nature Energy{" "}
+          {/* Retirement Groups Overview */}
+          <div className="mt-10 leading-relaxed text-slate-700 dark:text-slate-300">
+            <h2 className="mb-2 text-2xl font-semibold text-black dark:text-white">
+              Retirement Groups — Quick Overview
+            </h2>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>
+                <span className="font-medium">Fuel Blend Plants:</span>{" "}
+                Regulatory non-compliance and clean energy targets.
+              </li>
+              <li>
+                <span className="font-medium">
+                  Retrofitted but Vulnerable Plants:
+                </span>{" "}
+                Only partial retirements planned; economic unviability and
+                renewable competition.
+              </li>
+              <li>
+                <span className="font-medium">Democratic Majority Plants:</span>{" "}
+                Political and regulatory pressure for clean energy transitions.
+              </li>
+              <li>
+                <span className="font-medium">High Health Impact Plants:</span>{" "}
+                Air-quality related public health concerns and environmental
+                regulations.
+              </li>
+              <li>
+                <span className="font-medium">Expensive Plants:</span> High
+                operating costs and environmental retrofit requirements.
+              </li>
+              <li>
+                <span className="font-medium">Young Plants:</span> No planned
+                retirements.
+              </li>
+              <li>
+                <span className="font-medium">
+                  Plants in Anti-Coal Regions:
+                </span>{" "}
+                Political opposition and economic difficulties.
+              </li>
+              <li>
+                <span className="font-medium">Air Quality Offenders:</span> No
+                planned retirements.
+              </li>
+            </ul>
+          </div>
           <div className="mt-10 leading-relaxed text-slate-700 dark:text-slate-300">
             <h2 className="mb-2 text-2xl font-semibold text-black dark:text-white">
               Thema — Turning Finicky Graphs into Useful Ones
