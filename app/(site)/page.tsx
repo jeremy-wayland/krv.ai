@@ -16,14 +16,23 @@ export const metadata: Metadata = {
     description:
       "One protocol layer that tames enterprise data complexity. Deploy anywhere with no migrations.",
     url: "https://krv.ai/",
-    siteName: "Krv Analytics",
+    siteName: "Krv.ai",
+    images: [
+      {
+        url: "/images/UIs/OG-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Krv Analytics",
+      },
+    ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krv Analytics — Enterprise AI Middleware",
+    title: "Krv.ai",
     description:
       "One protocol layer that tames enterprise data complexity. Deploy anywhere with no migrations.",
+    images: ["/images/UIs/OG-image.png"],
   },
 };
 
