@@ -7,7 +7,7 @@ const rawNews: NewsItem[] = [
     title:
       "EurekAlert! covers Nature Energy paper on accelerating coal retirement",
     summary:
-      "UCSB research featured on AAAS's official press release platform, highlighting data-driven framework for faster U.S. coal phaseout.",
+      "Research featured on AAAS's official press release platform, highlighting data-driven framework for faster U.S. coal phaseout.",
     source: "EurekAlert! (AAAS)",
     linkUrl: "https://www.eurekalert.org/news-releases/1103317",
     linkLabel: "Read Article",
