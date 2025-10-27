@@ -1,7 +1,7 @@
 "use client";
 import {
   CSSProperties,
-  MouseEvent,
+  PointerEvent as ReactPointerEvent,
   useEffect,
   useLayoutEffect,
   useMemo,
@@ -34,7 +34,20 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
   const nEngineRef = useRef<HTMLDivElement | null>(null);
   const nModelsRef = useRef<HTMLDivElement | null>(null);
   const nApiRef = useRef<HTMLDivElement | null>(null);
-  const draggingRef = useRef<{ id: string; dx: number; dy: number } | null>(
+  const draggingRef = useRef<
+    | {
+        id: string;
+        dx: number;
+        dy: number;
+        w: number;
+        h: number;
+        minX: number;
+        maxX: number;
+        minY: number;
+        maxY: number;
+      }
+    | null
+  >(
     null,
   );
   const [positions, setPositions] = useState<
@@ -43,6 +56,17 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
   const [paths, setPaths] = useState<Array<{ d: string }>>([]);
 
   const [ready, setReady] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  // Respect prefers-reduced-motion
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(!!mq.matches);
+    update();
+    mq.addEventListener?.("change", update);
+    return () => mq.removeEventListener?.("change", update);
+  }, []);
 
   // Initialize centered, compact vertical layout once container is measured
   useLayoutEffect(() => {
@@ -159,32 +183,74 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
   }, [positions]);
 
   // Drag logic for nodes
-  const onMouseDown = (id: string) => (e: MouseEvent) => {
+  const onPointerDown = (id: string) => (e: ReactPointerEvent) => {
     const c = containerRef.current;
     if (!c) return;
     const rect = c.getBoundingClientRect();
     const pos = positions[id] || { x: 0, y: 0 };
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
-    draggingRef.current = { id, dx: mouseX - pos.x, dy: mouseY - pos.y };
+    const target = e.currentTarget as HTMLElement;
+    const w = target.offsetWidth;
+    const h = target.offsetHeight;
+    // Responsive paddings with more breathing room on all sides
+    const padX = Math.max(12, Math.min(32, Math.round(c.clientWidth * 0.04)));
+    const padTop = Math.max(12, Math.min(32, Math.round(c.clientHeight * 0.03)));
+    const padBottom = Math.max(
+      140,
+      Math.min(360, Math.round(c.clientHeight * 0.32)),
+    );
+
+    // Compute bounds; ensure we don't immediately clamp current position
+    const minX = padX;
+    let maxX = Math.max(minX, c.clientWidth - w - padX);
+    const minY = padTop;
+    let maxY = Math.max(minY, c.clientHeight - h - padBottom);
+    // Avoid jump if initial layout placed node slightly beyond maxY on small screens
+    maxY = Math.max(maxY, pos.y);
+    // Avoid jump for X as well if initial layout is slightly beyond
+    maxX = Math.max(maxX, pos.x);
+
+    draggingRef.current = {
+      id,
+      dx: mouseX - pos.x,
+      dy: mouseY - pos.y,
+      w,
+      h,
+      minX,
+      maxX,
+      minY,
+      maxY,
+    };
     (e.currentTarget as HTMLElement).style.cursor = "grabbing";
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
+    } catch {}
     e.preventDefault();
   };
 
-  const onMouseMove = (e: MouseEvent) => {
+  const moveRaf = useRef<number | null>(null);
+  const lastMove = useRef<{ x: number; y: number } | null>(null);
+  const onPointerMove = (e: ReactPointerEvent) => {
     if (!draggingRef.current) return;
     const c = containerRef.current;
     if (!c) return;
     const rect = c.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    const { id, dx, dy } = draggingRef.current;
-    const nx = mouseX - dx;
-    const ny = mouseY - dy;
-    setPositions((p) => ({ ...p, [id]: { x: nx, y: ny } }));
+    lastMove.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    if (moveRaf.current != null) return;
+    moveRaf.current = requestAnimationFrame(() => {
+      moveRaf.current = null;
+      if (!draggingRef.current || !lastMove.current) return;
+      const { id, dx, dy, minX, maxX, minY, maxY } = draggingRef.current;
+      const nx = lastMove.current.x - dx;
+      const ny = lastMove.current.y - dy;
+      const clampedX = Math.min(Math.max(nx, minX), maxX);
+      const clampedY = Math.min(Math.max(ny, minY), maxY);
+      setPositions((p) => ({ ...p, [id]: { x: clampedX, y: clampedY } }));
+    });
   };
 
-  const onMouseUp = () => {
+  const onPointerUp = () => {
     draggingRef.current = null;
   };
 
@@ -192,10 +258,10 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
     <div
       ref={containerRef}
       className="relative h-[600px] w-full lg:h-[550px] xl:h-[600px]"
-      onMouseMove={onMouseMove}
-      onMouseUp={onMouseUp}
-      onMouseLeave={onMouseUp}
-    >
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerLeave={onPointerUp}
+      >
       {/* Node: Enterprise Systems */}
       <div
         ref={nSrcSysRef}
@@ -208,7 +274,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
           cursor: "grab",
           opacity: ready ? 1 : 0,
         }}
-        onMouseDown={onMouseDown("srcSys")}
+        onPointerDown={onPointerDown("srcSys")}
       >
         <div className="text-[13px] font-medium">Enterprise Systems</div>
       </div>
@@ -227,13 +293,13 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
           cursor: "grab",
           opacity: ready ? 1 : 0,
         }}
-        onMouseDown={onMouseDown("engine")}
+        onPointerDown={onPointerDown("engine")}
       >
         <div className="mb-2 text-[13px] font-medium">
           Hypergraph Data Engine
         </div>
         <div className="mx-[30px] mb-[30px] h-[200px] w-[calc(100%-60px)] overflow-hidden rounded-lg border border-slate-200/60 bg-gradient-to-br from-sky-400/5 to-pink-500/5 dark:border-slate-700/60">
-          <Fiber color={initialColor} shape={shape} zoom={12} drift={2} />
+          <Fiber color={initialColor} shape={shape} zoom={reducedMotion ? 8 : 12} drift={reducedMotion ? 0 : 2} />
         </div>
       </div>
 
@@ -249,7 +315,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
           cursor: "grab",
           opacity: ready ? 1 : 0,
         }}
-        onMouseDown={onMouseDown("models")}
+        onPointerDown={onPointerDown("models")}
       >
         <div className="text-[13px] font-medium">AI & ML Models</div>
       </div>
@@ -266,7 +332,7 @@ export default function SimpleFlow({ initialColor = "#111" }: Props) {
           cursor: "grab",
           opacity: ready ? 1 : 0,
         }}
-        onMouseDown={onMouseDown("api")}
+        onPointerDown={onPointerDown("api")}
       >
         <div className="text-[13px] font-medium">API Endpoints</div>
       </div>
