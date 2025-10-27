@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import SectionHeader from "@/components/Common/SectionHeader";
 import { NewsItem as Item, groupNewsByYear } from "@/types/news";

@@ -1,5 +1,6 @@
 import React from "react";
 import { NewsItem as Item } from "@/types/news";
+import Underline from "@/components/Animations/UnderlineAnchor";
 
 interface Props {
   item: Item;
@@ -31,7 +32,23 @@ export default function NewsItem({ item, compact }: Props) {
         </time>
         <div className="min-w-0">
           <h3 className="text-base font-medium tracking-tight text-gray-900 dark:text-gray-100">
-            {item.title}
+            {item.linkUrl ? (
+              <Underline
+                href={item.linkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={
+                  {
+                    "--underline-size": "2px",
+                    // "--underline-color": "#dbd5d5",
+                  } as React.CSSProperties
+                }
+              >
+                {item.title}
+              </Underline>
+            ) : (
+              <span>{item.title}</span>
+            )}
           </h3>
           {item.summary && (
             <p className="mt-1 line-clamp-3 text-sm text-gray-600 dark:text-gray-300">
@@ -53,23 +70,26 @@ export default function NewsItem({ item, compact }: Props) {
               </span>
             ))}
           </div>
-          {item.linkUrl && (
-            <div className="mt-2 flex justify-end">
-              <a
+          <div className="mt-2 flex justify-end">
+            {item.linkUrl ? (
+              <Underline
                 href={item.linkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${item.linkLabel ?? "Read full article"}: ${item.title}`}
-                className="rounded-sm text-xs font-medium text-indigo-600 underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-400"
+                className="rounded-sm text-xs font-medium text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-400"
+                style={{ "--underline-size": "1px" } as React.CSSProperties}
               >
                 {item.linkLabel ?? "Read full article"}
                 <span aria-hidden="true"> →</span>
-              </a>
-            </div>
-          )}
+              </Underline>
+            ) : (
+              <span className="invisible text-xs">placeholder</span>
+            )}
+          </div>
         </div>
       </div>
-      <hr className="mt-4 border-gray-100 dark:border-gray-800" />
+      <hr className="mt-4 border-gray-200 dark:border-gray-800" />
     </article>
   );
 }

@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import CoalNetworkGraph from "./CoalNetworkGraph";
-import Underline from "../Animations/UnderlineAnchor";
+import ResourceCards from "@/components/Common/ResourceCards";
+import coalResources from "@/components/Academia/resources-CoalPost";
 
 export default function CoalPost() {
   const [expanded, setExpanded] = useState(false);
@@ -215,51 +216,17 @@ export default function CoalPost() {
             </ul>
           </div>
         </article>
-        {/* Big callouts for docs and repos */}
+        {/* Resources section: modular component */}
         <article className="dark:bg-gray-dark mt-6 rounded-xl bg-white px-6 py-8 ring-1 ring-slate-200/70 dark:ring-slate-800/60 sm:px-10 sm:py-10">
-          <h1 className="mb-3 pr-0 text-3xl font-bold text-black dark:text-white xl:text-4xl">
-            Resources:
-          </h1>
-          <br></br>
-          <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
-            <Underline
-              href="https://krv-analytics.github.io/Thema/"
-              style={
-                {
-                  "--underline-size": "3px",
-                } as React.CSSProperties
-              }
-            >
-              Thema Documentation + User Guide
-            </Underline>
-            <br></br>
-            <br></br>
-            <Underline
-              href="https://krv-analytics.github.io/retire/"
-              style={
-                {
-                  "--underline-size": "3px",
-                  "--underline-color": "#ada8a8",
-                } as React.CSSProperties
-              }
-            >
-              Retire Docs (walkthroughs for coal retirement analysis using
-              Thema)
-            </Underline>
-            <br></br>
-            <br></br>
-            <Underline
-              href="https://github.com/Krv-Analytics/Thema"
-              style={
-                {
-                  "--underline-size": "3px",
-                  "--underline-color": "#dbd5d5",
-                } as React.CSSProperties
-              }
-            >
-              Thema GitHub Repository
-            </Underline>
-          </h3>
+          <header className="mb-6">
+            <h1 className="text-3xl font-bold text-black dark:text-white xl:text-4xl">
+              Resources
+            </h1>
+            {/* <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Docs, code, and publications tied to this work.
+            </p> */}
+          </header>
+          <ResourceCards items={coalResources} />
         </article>
       </div>
     </section>
