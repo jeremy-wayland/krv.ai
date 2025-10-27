@@ -35,8 +35,8 @@ const Hero = () => {
                   <li className="flex items-start">
                     <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
                     <span>
-                      Skip generic solutions. Krv is the essential
-                      <b> middleware </b>
+                      Skip generic solutions. Krv is the{" "}
+                      <b> essential middleware </b>
                       that lets you build and own custom, high-impact AI
                       solutions—developed for and within your system.
                     </span>
@@ -45,8 +45,9 @@ const Hero = () => {
                     <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
                     <span>
                       Empower domain experts—<b>non-technical users</b> can
-                      directly build and develop AI workflows using their
-                      business knowledge.
+                      directly build AI workflows using their
+                      <b> business knowledge</b>, ending in a production-ready
+                      APIs.
                     </span>
                   </li>
                 </ul>
