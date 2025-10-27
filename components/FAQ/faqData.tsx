@@ -3,18 +3,18 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "Why Do I Need This?",
-    ans: "Well, unless your data magically cleans and structures itself (in which case, please sell us your product 😉), you need this. Most companies are sitting on piles of messy, multimodal data: text, tables, logs, images, whatever—which creates serious headaches, even for experienced data scientists. Krv doesn't just handle that complexity—we leverage it, turning chaos into a live knowledge graph that actually improves your data quality and unlocks smarter, faster downstream analysis. Got analysts but no data engineers? Krv fills the gap. Got data engineers? We're their copilot. Either way, we plug in fast and make your team way more productive.",
+    quest: "Representation Learning as a Service",
+    ans: "We learn a comprehensive graph representation of your entire data system—mapping data types, flows, and relationships across all your enterprise infrastructure. This deep structural understanding provides every AI workflow and model with the real-time context it needs to succeed. Instead of generic, surface-level automations, our representation ensures high-quality, usable data flows directly into your AI models to deliver tailored optimizations, eliminating the largest blocker to successful ML deployment.",
   },
   {
     id: 2,
-    quest: "Is Data Engineering Really That Hard?",
-    ans: "Yes—it often is. Around 80% of data science work goes into cleaning, curating, and preparing data, which is both time-consuming and error-prone. That’s where Krv Analytics comes in. We automate the hardest parts of data engineering, transforming raw inputs into a live knowledge graph. This lets you skip the wrangling and focus on extracting insights through dynamic, adaptive workflows built for your specific needs.",
+    quest: "Customized In-System Optimizations",
+    ans: "Forget generic chatbots and virtual assistants that fail to yield measurable ROI. Krv enables the in-house production of machine learning pipelines that automate and streamline your unique workflows. By adapting directly to your systems without brittle ETL pipelines, our hypergraph data engine allows your domain experts to rapidly prototype and deploy reliable, end-to-end custom AI solutions.",
   },
   {
     id: 3,
-    quest: "Why Graphs?",
-    ans: "Graphs make complex data relationships easy to understand and explore. They let you connect the dots—literally—between different pieces of information, uncovering patterns and insights that might otherwise go unnoticed. Unlike asking ChatGPT for a data engineering plan without constraints, graphs provide a structured environment with clear rules, ensuring your plans are realistic and fit your infrastructure. That’s the power of graphs.",
+    quest: "Instant API & Front-End Integration",
+    ans: "Each trained model ships with a ready-to-use API. Simply plug it into your existing systems or custom UIs and trigger model runs as needed. Krv completely handles the orchestration, scaling, and infrastructure, so your team can focus on shipping solutions faster, not managing servers.",
   },
 ];
 

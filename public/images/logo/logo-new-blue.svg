@@ -4,7 +4,7 @@
    class="h-15 w-45 transform scale-[1]"
    version="1.1"
    id="svg4"
-   sodipodi:docname="logo-dark.svg"
+   sodipodi:docname="logo-new-blue.svg"
    inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    width="180"
    height="50"
@@ -35,13 +35,13 @@
      inkscape:label="Layer 1"
      id="layer1"
      transform="matrix(0.23250195,0,0,0.23250195,47.471304,0.52143437)"
-     style="fill:#ff0000;fill-opacity:1"><path
-       style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.43299;stroke-dasharray:5.73193, 2.86598"
+     style="fill:#272843;fill-opacity:1"><path
+       style="display:inline;fill:#272843;fill-opacity:1;fill-rule:evenodd;stroke-width:1.43299;stroke-dasharray:5.73193, 2.86598"
        d="m 46.137654,106.32606 86.394976,-86.481927 56.48777,0.05938 -83.8588,84.858387 84.11445,85.53421 -55.3251,-0.17457 z"
        id="path3"
        sodipodi:nodetypes="ccccccc"
        inkscape:label="path3" /><path
-       style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4269;stroke-dasharray:5.70757, 2.8538"
+       style="fill:#272843;fill-opacity:1;fill-rule:evenodd;stroke-width:1.4269;stroke-dasharray:5.70757, 2.8538"
        d="m 26.444164,20.69278 41.461606,0.118739 0.08046,59.918852 -25.73253,25.745539 -0.0012,63.54146 34.0524,-20.96039 0.10566,42.81608 -50.533959,-0.32117 z"
        id="path4"
        sodipodi:nodetypes="ccccccccc" /></g></svg>

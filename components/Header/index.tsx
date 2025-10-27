@@ -25,7 +25,16 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+    return () => window.removeEventListener("scroll", handleStickyMenu);
+  }, []);
+
+  // Close mobile nav on route change (e.g., after clicking a link)
+  useEffect(() => {
+    if (navigationOpen || dropdownToggler) {
+      setNavigationOpen(false);
+      setDropdownToggler(false);
+    }
+  }, [pathUrl]);
 
   return (
     <header
@@ -46,7 +55,7 @@ const Header = () => {
               className="hidden w-full dark:block"
             />
             <Image
-              src="/images/logo/logo-light.svg"
+              src="/images/logo/logo-new-blue.svg"
               alt="logo"
               width={119.03}
               height={30}
@@ -129,7 +138,15 @@ const Header = () => {
                       >
                         {menuItem.submenu.map((item, key) => (
                           <li key={key} className="hover:text-primary">
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                            <Link
+                              href={item.path || "#"}
+                              onClick={() => {
+                                setNavigationOpen(false);
+                                setDropdownToggler(false);
+                              }}
+                            >
+                              {item.title}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -142,6 +159,10 @@ const Header = () => {
                           ? "text-primary hover:text-primary"
                           : "hover:text-primary"
                       }
+                      onClick={() => {
+                        setNavigationOpen(false);
+                        setDropdownToggler(false);
+                      }}
                     >
                       {menuItem.title}
                     </Link>
@@ -152,7 +173,7 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
+            {/* <ThemeToggler /> */}
 
             <Link
               href="https://github.com/Krv-Analytics"

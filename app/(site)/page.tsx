@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
-import HowItWorks from "@/components/HowItWorks";
-import Contact from "@/components/Contact";
+// import HowItWorks from "@/components/HowItWorks";
+// import Contact from "@/components/Contact";
 import WhatWeBring from "@/components/WhatWeBring";
+import FastDeploy from "@/components/FastDeploy";
 
 export const metadata: Metadata = {
   title: "Welcome to Krv",
@@ -16,9 +17,10 @@ export default function Home() {
     <main>
       <Hero />
       <WhatWeBring />
-      <HowItWorks />
+      <FastDeploy />
+      {/* <HowItWorks /> */}
       <FAQ />
-      <Contact />
+      {/* <Contact /> */}
     </main>
   );
 }

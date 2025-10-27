@@ -33,7 +33,7 @@ const Footer = () => {
                   <Image
                     width={200}
                     height={200}
-                    src="/images/logo/logo-light.svg"
+                    src="/images/logo/logo-new-blue.svg"
                     alt="Logo"
                     className="dark:hidden"
                   />
@@ -47,9 +47,8 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  At Krv, we're not just automating data engineering—we're
-                  bridging the gap between cutting-edge research and real-world
-                  business needs.
+                  From idea to production: infrastructure to build, deploy, and
+                  own AI made for your business.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -63,7 +62,7 @@ const Footer = () => {
                 </a>
               </motion.div>
 
-              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+              <div className="flex w-full flex-col gap-8 md:flex-row md:flex-wrap md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
                 <motion.div
                   variants={{
                     hidden: {
@@ -153,14 +152,16 @@ const Footer = () => {
                         Meet the Team
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/about"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        About
-                      </a>
-                    </li>
+                    {false && (
+                      <li>
+                        <a
+                          href="/about"
+                          className="mb-3 inline-block hover:text-primary"
+                        >
+                          About
+                        </a>
+                      </li>
+                    )}
                   </ul>
                 </motion.div>
 
@@ -225,6 +226,44 @@ const Footer = () => {
                     </div>
                   </form>
                 </motion.div>
+
+                {/* Logos row slotted under the right column group */}
+                <p className="mb-1.5 mt-1 w-full text-sectiontitle uppercase tracking-[5px] md:basis-full">
+                  Affiliations
+                </p>
+                <div className="mt-0 flex w-full flex-wrap items-center justify-start gap-8 sm:gap-12 md:mt-0 md:basis-full">
+                  <a
+                    href="https://skydeck.berkeley.edu/program/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Berkeley SkyDeck PAD-13"
+                    className="group flex h-[60px] items-center justify-center"
+                  >
+                    <Image
+                      src="/images/logo/PAD-13_logo.svg"
+                      alt="Berkeley SkyDeck PAD-13"
+                      width={180}
+                      height={48}
+                      className="h-[2.3rem] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[2.875rem]"
+                    />
+                  </a>
+
+                  <a
+                    href="https://www.tum-venture-labs.de/labs/healthcare/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TUM Venture Labs Healthcare"
+                    className="group flex h-[60px] items-center justify-center"
+                  >
+                    <Image
+                      src="/images/logo/TUM_Venture_labs_logo.svg"
+                      alt="TUM Venture Labs Healthcare"
+                      width={220}
+                      height={48}
+                      className="h-[60px] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[60px]"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

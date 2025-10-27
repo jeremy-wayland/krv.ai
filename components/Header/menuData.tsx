@@ -10,14 +10,20 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "Industries",
+    title: "Initiatives",
     newTab: false,
     submenu: [
+      // {
+      //   id: 35,
+      //   title: "Recruiting",
+      //   newTab: false,
+      //   path: "/recruiting",
+      // },
       {
-        id: 35,
-        title: "Recruiting",
+        id: 36,
+        title: "Healthcare",
         newTab: false,
-        path: "/recruiting",
+        path: "/healthcare",
       },
       {
         id: 35.1,
@@ -27,35 +33,36 @@ const menuData: Menu[] = [
       },
       {
         id: 36,
-        title: "Healthcare",
-        newTab: false,
-        path: "/healthcare",
-      },
-      {
-        id: 36,
-        title: "Academic Collaborations",
+        title: "Academia",
         newTab: false,
         path: "/academia",
       },
     ],
   },
-  {
-    id: 2.3,
-    title: "About",
-    newTab: false,
-    path: "/about",
-  },
+  // About temporarily hidden; keep for future re-enable
+  // {
+  //   id: 2.3,
+  //   title: "About",
+  //   newTab: false,
+  //   path: "/about",
+  // },
 
   {
     id: 2.1,
-    title: "Meet the Team",
+    title: "Team",
     newTab: false,
     path: "/team",
+  },
+  {
+    id: 2.0,
+    title: "News",
+    newTab: false,
+    path: "/news",
   },
 
   {
     id: 4,
-    title: "Contact Us",
+    title: "Contact",
     newTab: false,
     path: "/contact",
   },
