@@ -49,14 +49,20 @@ const menuData: Menu[] = [
 
   {
     id: 2.1,
-    title: "Meet the Team",
+    title: "Team",
     newTab: false,
     path: "/team",
+  },
+  {
+    id: 2.0,
+    title: "News",
+    newTab: false,
+    path: "/news",
   },
 
   {
     id: 4,
-    title: "Contact Us",
+    title: "Contact",
     newTab: false,
     path: "/contact",
   },
