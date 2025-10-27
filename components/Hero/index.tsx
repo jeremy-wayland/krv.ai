@@ -17,22 +17,35 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <p>
-                One protocol layer that instantly tames enterprise data
-                complexity.
-                <br />
-                Deploy AI anywhere—<b>no migrations, no headaches</b>. We
-                connect directly to your existing systems and spin up advanced
-                ML/AI workflows in minutes.
-                <br />
-                Skip generic horizontal solutions. Krv is the essential
-                middleware that lets you build and own custom, high-impact AI
-                solutions—built for and within your system.
-                <br />
-                <span style={{ display: "block", height: "0.5em" }}></span>
-                {/* <pre>Krv Labs</pre> */}
-                <em>Built by data engineers and PhDs.</em>
-              </p>
+              <div className="space-y-4">
+                <p className="text-lg">
+                  One protocol layer that instantly tames enterprise data
+                  complexity.
+                </p>
+
+                <ul className="space-y-3 text-base">
+                  <li className="flex items-start">
+                    <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
+                    <span>
+                      Deploy AI anywhere—<b>no migrations, no headaches</b>. We
+                      connect directly to your existing systems and spin up
+                      advanced ML/AI workflows in minutes.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
+                    <span>
+                      Skip generic horizontal solutions. Krv is the essential
+                      middleware that lets you build and own custom, high-impact
+                      AI solutions—built for and within your system.
+                    </span>
+                  </li>
+                </ul>
+
+                <div className="pt-2">
+                  <em>Built by data engineers and PhDs.</em>
+                </div>
+              </div>
             </div>
 
             <div className="animate_right hidden md:w-1/2 lg:block">
