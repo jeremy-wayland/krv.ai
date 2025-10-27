@@ -47,9 +47,8 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  At Krv, we're not just automating data engineering—we're
-                  bridging the gap between cutting-edge research and real-world
-                  business needs.
+                  From idea to production: infrastructure to build, deploy, and
+                  own AI made for your business.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -63,7 +62,7 @@ const Footer = () => {
                 </a>
               </motion.div>
 
-              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+              <div className="flex w-full flex-col gap-8 md:flex-row md:flex-wrap md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
                 <motion.div
                   variants={{
                     hidden: {
@@ -227,63 +226,48 @@ const Footer = () => {
                     </div>
                   </form>
                 </motion.div>
+
+                {/* Logos row slotted under the right column group */}
+                <p className="mb-1.5 mt-1 w-full text-sectiontitle uppercase tracking-[5px] md:basis-full">
+                  Affiliations
+                </p>
+                <div className="mt-0 flex w-full flex-wrap items-center justify-start gap-8 sm:gap-12 md:mt-0 md:basis-full">
+                  <a
+                    href="https://skydeck.berkeley.edu/program/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Berkeley SkyDeck PAD-13"
+                    className="group flex h-[60px] items-center justify-center"
+                  >
+                    <Image
+                      src="/images/logo/PAD-13_logo.svg"
+                      alt="Berkeley SkyDeck PAD-13"
+                      width={180}
+                      height={48}
+                      className="h-[2.3rem] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[2.875rem]"
+                    />
+                  </a>
+
+                  <a
+                    href="https://www.tum-venture-labs.de/labs/healthcare/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TUM Venture Labs Healthcare"
+                    className="group flex h-[60px] items-center justify-center"
+                  >
+                    <Image
+                      src="/images/logo/TUM_Venture_labs_logo.svg"
+                      alt="TUM Venture Labs Healthcare"
+                      width={220}
+                      height={48}
+                      className="h-[60px] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[60px]"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           {/* <!-- Footer Top --> */}
-
-          {/* Affiliations strip */}
-          <div className="border-t border-stroke py-10 dark:border-strokedark">
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: -20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_top flex flex-col items-center gap-6"
-            >
-              <p className="text-sectiontitle uppercase tracking-[5px] text-black dark:text-white">
-                Affiliations
-              </p>
-
-              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-                <a
-                  href="https://skydeck.berkeley.edu/program/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Berkeley SkyDeck PAD-13"
-                  className="group flex h-[60px] items-center justify-center"
-                >
-                  <Image
-                    src="/images/logo/PAD-13_logo.svg"
-                    alt="Berkeley SkyDeck PAD-13"
-                    width={180}
-                    height={48}
-                    className="h-[2.3rem] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[2.875rem]"
-                  />
-                </a>
-
-                <a
-                  href="https://www.tum-venture-labs.de/labs/healthcare/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="TUM Venture Labs Healthcare"
-                  className="group flex h-[60px] items-center justify-center"
-                >
-                  <Image
-                    src="/images/logo/TUM_Venture_labs_logo.svg"
-                    alt="TUM Venture Labs Healthcare"
-                    width={220}
-                    height={48}
-                    className="h-[60px] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[60px]"
-                  />
-                </a>
-              </div>
-            </motion.div>
-          </div>
 
           {/* <!-- Footer Bottom --> */}
           <div className="flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
