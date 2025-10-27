@@ -97,7 +97,7 @@ export default function CoalPost() {
               <li>
                 Introduces the Thema algorithm: a robust unsupervised method for
                 learning optimal graph representations from high dimensional
-                datasets using computational geometry and topology.
+                datasets.
               </li>
             </ul>
           </div>
