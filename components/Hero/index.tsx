@@ -18,10 +18,16 @@ const Hero = () => {
               </h1>
 
               <p>
-                One protocol layer that abstracts enterprise data complexity so
-                AI systems deploy anywhere—<b>no migrations, no headaches</b>.
-                We connect to your systems and instantly spin up workflows with
-                advanced ML/AI.
+                One protocol layer that instantly tames enterprise data
+                complexity.
+                <br />
+                Deploy AI anywhere—<b>no migrations, no headaches</b>. We
+                connect directly to your existing systems and spin up advanced
+                ML/AI workflows in minutes.
+                <br />
+                Skip generic horizontal solutions. Krv is the essential
+                middleware that lets you build and own custom, high-impact AI
+                solutions—built for and within your system.
                 <br />
                 <span style={{ display: "block", height: "0.5em" }}></span>
                 {/* <pre>Krv Labs</pre> */}
