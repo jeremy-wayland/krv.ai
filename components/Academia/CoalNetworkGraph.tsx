@@ -42,6 +42,7 @@ export default function CoalNetworkGraph({
     y: number;
   } | null>(null);
   const [query, setQuery] = useState("");
+  const [lastFocus, setLastFocus] = useState<"search" | "group" | null>(null);
   const fgRef = useRef<any>(null);
   const fitOnceRef = useRef<boolean>(false);
   const [groups, setGroups] = useState<
@@ -268,38 +269,12 @@ export default function CoalNetworkGraph({
 
   // Force a redraw when search changes so highlight rings and sizes update even when engine paused
   useEffect(() => {
+    // Always refresh visuals when query changes so match coloring updates
     try {
       fgRef.current?.refresh();
     } catch {}
-    // Recenter and zoom to the matched component(s)
-    if (!fgRef.current || !data) return;
-    const nodes = Array.from(componentSet.size ? componentSet : matchSet);
-    if (!nodes.length) return;
-    const xs = nodes.map((n: any) => n.x).filter((v) => typeof v === "number");
-    const ys = nodes.map((n: any) => n.y).filter((v) => typeof v === "number");
-    if (!xs.length || !ys.length) return;
-    const minX = Math.min(...xs),
-      maxX = Math.max(...xs);
-    const minY = Math.min(...ys),
-      maxY = Math.max(...ys);
-    const cx = (minX + maxX) / 2;
-    const cy = (minY + maxY) / 2;
-    const dx = Math.max(1, maxX - minX);
-    const dy = Math.max(1, maxY - minY);
-    const padding = 80;
-    const scaleX = width / (dx + padding);
-    const scaleY = height / (dy + padding);
-    const k = Math.min(scaleX, scaleY);
-    // first zoom out to show some context, then center/zoom
-    try {
-      fgRef.current.zoom(Math.min(1, k), 200);
-      fgRef.current.centerAt(cx, cy, 300);
-      setTimeout(() => {
-        try {
-          fgRef.current.zoom(k * 0.9, 300);
-        } catch {}
-      }, 350);
-    } catch {}
+    // Update focus precedence when typing
+    if (query.trim()) setLastFocus("search");
   }, [query]);
 
   // Also refresh when selection changes so selected node color updates immediately
@@ -309,12 +284,19 @@ export default function CoalNetworkGraph({
     } catch {}
   }, [selected]);
 
-  // Snap to active group on change
+  // Recenter view based on the most recent action (search or group snap)
   useEffect(() => {
-    if (activeGroup == null || !fgRef.current || !groups.length) return;
-    const grp = groups.find((g) => g.id === activeGroup);
-    if (!grp) return;
-    const nodes = grp.nodes;
+    if (!fgRef.current) return;
+    // Determine target nodes based on precedence
+    let nodes: any[] = [];
+    if (lastFocus === "search" && matchSet.size) {
+      nodes = Array.from(matchSet);
+    } else if (lastFocus === "group" && activeGroup != null) {
+      const grp = groups.find((g) => g.id === activeGroup);
+      if (grp) nodes = grp.nodes;
+    } else {
+      return; // nothing to focus
+    }
     const xs = nodes.map((n: any) => n.x).filter((v) => typeof v === "number");
     const ys = nodes.map((n: any) => n.y).filter((v) => typeof v === "number");
     if (!xs.length || !ys.length) return;
@@ -339,7 +321,7 @@ export default function CoalNetworkGraph({
         } catch {}
       }, 350);
     } catch {}
-  }, [activeGroup, groups, width, height]);
+  }, [lastFocus, matchSet, activeGroup, groups, width, height]);
 
   const closePopup = () => setSelected(null);
 
@@ -477,11 +459,12 @@ export default function CoalNetworkGraph({
             <select
               className="rounded border border-slate-300 bg-white px-2 py-1 text-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
               value={activeGroup ?? ""}
-              onChange={(e) =>
-                setActiveGroup(
-                  e.target.value === "" ? null : Number(e.target.value),
-                )
-              }
+              onChange={(e) => {
+                const val =
+                  e.target.value === "" ? null : Number(e.target.value);
+                setActiveGroup(val);
+                if (val != null) setLastFocus("group");
+              }}
             >
               <option value="">All</option>
               {groups.map((g) => (
@@ -493,14 +476,19 @@ export default function CoalNetworkGraph({
             </select>
             <button
               className="rounded bg-slate-900 px-2 py-1 text-white hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
-              onClick={() =>
+              onClick={() => {
                 setActiveGroup((prev) => {
-                  if (prev == null) return groups[0]?.id ?? null;
+                  if (prev == null) {
+                    const id = groups[0]?.id ?? null;
+                    if (id != null) setLastFocus("group");
+                    return id;
+                  }
                   const idx = groups.findIndex((g) => g.id === prev);
-                  const next = groups[(idx + 1) % groups.length]?.id;
-                  return next ?? null;
-                })
-              }
+                  const next = groups[(idx + 1) % groups.length]?.id ?? null;
+                  if (next != null) setLastFocus("group");
+                  return next;
+                });
+              }}
             >
               Next
             </button>
@@ -521,10 +509,12 @@ export default function CoalNetworkGraph({
               className="invisible absolute bottom-9 right-0 w-[min(320px,85vw)] translate-y-1 rounded-md border border-slate-200 bg-white p-3 text-xs text-slate-700 opacity-0 shadow-lg transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
               <p>
-                Click a node to see its plants and group details in the right sidebar.
+                Click a node to see its plants and group details in the right
+                sidebar.
               </p>
               <p className="mt-1">
-                Use the Group control (top‑right) to view a specific group or cycle through groups.
+                Use the Group control (top‑right) to view a specific group or
+                cycle through groups.
               </p>
               <p className="mt-1">Hover a node to highlight its neighbors.</p>
             </div>
@@ -597,7 +587,10 @@ export default function CoalNetworkGraph({
                       )}
                       <button
                         className="rounded bg-slate-900 px-2 py-1 text-white hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
-                        onClick={() => setActiveGroup(gid)}
+                        onClick={() => {
+                          setActiveGroup(gid);
+                          setLastFocus("group");
+                        }}
                       >
                         Snap to Group
                       </button>
