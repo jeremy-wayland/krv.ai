@@ -2,14 +2,14 @@ import { NewsItem, sortNewsDesc } from "@/types/news";
 
 const rawNews: NewsItem[] = [
   {
-    id: "2025-10-27-science-magazine-coverage",
+    id: "2025-10-27-eurekalert-nature-energy",
     date: "2025-10-27",
-    title: "Science Magazine covers Krv’s Nature Energy paper",
+    title:
+      "EurekAlert! covers Nature Energy paper on accelerating coal retirement",
     summary:
-      "Media coverage highlighting the findings and implications of our study.",
-    source: "Science Magazine",
-    linkUrl:
-      "https://scienmag.com/accelerating-us-coal-phase-out-via-vulnerability-insights/#google_vignette",
+      "UCSB research featured on AAAS's official press release platform, highlighting data-driven framework for faster U.S. coal phaseout.",
+    source: "EurekAlert! (AAAS)",
+    linkUrl: "https://www.eurekalert.org/news-releases/1103317",
     linkLabel: "Read Article",
     tags: ["press", "publication"],
   },

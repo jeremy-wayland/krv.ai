@@ -131,6 +131,7 @@ export default function CoalPost() {
               </li>
             </ul>
           </div>
+          <br />
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <div className="inline-flex rounded-md bg-slate-50/60 p-1 ring-1 ring-slate-200/70 dark:bg-slate-900/40 dark:ring-slate-800/60">
               <button
@@ -195,7 +196,9 @@ export default function CoalPost() {
               />
             )}
           </div>
-          Figures based on Gathrid, et al. (2025) Nature Energy{" "}
+          <span className="text-xs">
+            Figures based on Gathrid, et al. (2025) Nature Energy{" "}
+          </span>
           {/* Retirement Groups Overview */}
           <div className="mt-10 leading-relaxed text-slate-700 dark:text-slate-300">
             <h2 className="mb-2 text-2xl font-semibold text-black dark:text-white">
