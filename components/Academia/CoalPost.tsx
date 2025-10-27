@@ -3,6 +3,7 @@ import { useState } from "react";
 import CoalNetworkGraph from "./CoalNetworkGraph";
 import ResourceCards from "@/components/Common/ResourceCards";
 import coalResources from "@/components/Academia/resources-CoalPost";
+import { colorForGroup } from "./groupColors";
 
 export default function CoalPost() {
   const [expanded, setExpanded] = useState(false);
@@ -95,8 +96,27 @@ export default function CoalPost() {
                 effective (financial, regulatory, public health, grid context).
               </li>
               <li>
-                Introduces the parameter‑sweep + topological condensation method
-                later formalized in Thema.
+                Introduces the Thema algorithm: a robust unsupervised method for
+                learning optimal graph representations from high dimensional
+                datasets using computational geometry and topology.
+              </li>
+            </ul>
+          </div>
+          <div className="mt-6 leading-relaxed text-slate-700 dark:text-slate-300">
+            <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
+              Our Graph Models
+            </h3>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>
+                The graph shows all U.S. coal plants; connections indicate
+                similar features across environmental, sociopolitical, and
+                financial factors.
+              </li>
+              <li>
+                This is a Mapper graph (Singh et al.), a tool from topological
+                data analysis. Nodes represent clusters of coal plants, and
+                edges connect clusters that share membership (i.e., overlap in
+                plants).
               </li>
             </ul>
           </div>
@@ -165,27 +185,155 @@ export default function CoalPost() {
             )}
           </div>
           Figures based on Gathrid, et al. (2025) Nature Energy{" "}
+          {/* Retirement Groups Overview */}
           <div className="mt-10 leading-relaxed text-slate-700 dark:text-slate-300">
             <h2 className="mb-2 text-2xl font-semibold text-black dark:text-white">
-              Thema — Turning Finicky Graphs into Useful Ones
+              Retirement Groups — Quick Overview
+            </h2>
+            <ul className="space-y-2 pl-0">
+              {/* 0 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(0) }}
+                />
+                <div>
+                  <span className="font-medium">Fuel Blend Plants:</span>{" "}
+                  Regulatory non-compliance and clean energy targets.
+                </div>
+              </li>
+              {/* 1 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(1) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    Retrofitted but Vulnerable Plants:
+                  </span>{" "}
+                  Only partial retirements planned; economic unviability and
+                  renewable competition.
+                </div>
+              </li>
+              {/* 2 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(2) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    Democratic Majority Plants:
+                  </span>{" "}
+                  Political and regulatory pressure for clean energy
+                  transitions.
+                </div>
+              </li>
+              {/* 3 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(3) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    High Health Impact Plants:
+                  </span>{" "}
+                  Air-quality related public health concerns and environmental
+                  regulations.
+                </div>
+              </li>
+              {/* 4 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(4) }}
+                />
+                <div>
+                  <span className="font-medium">Expensive Plants:</span> High
+                  operating costs and environmental retrofit requirements.
+                </div>
+              </li>
+              {/* 5 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(5) }}
+                />
+                <div>
+                  <span className="font-medium">Young Plants:</span> No planned
+                  retirements.
+                </div>
+              </li>
+              {/* 6 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(6) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    Plants in Anti-Coal Regions:
+                  </span>{" "}
+                  Political opposition and economic difficulties.
+                </div>
+              </li>
+              {/* 7 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(7) }}
+                />
+                <div>
+                  <span className="font-medium">Air Quality Offenders:</span> No
+                  planned retirements.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-10 leading-relaxed text-slate-700 dark:text-slate-300">
+            <h2 className="mb-2 text-2xl font-semibold text-black dark:text-white">
+              Thema — Learning Relevant Representations
             </h2>
             <p>
-              If you’ve nudged UMAP and watched your “insight” dissolve, you
-              know the feeling. Thema treats that sensitivity like a feature to
-              be managed: explore the reasonable settings, then keep what’s
-              consistently real.
+              When analyzing the US coal fleet, we faced a common challenge:
+              deriving robust, actionable insights from a complex,
+              high-dimensional dataset. We were overwhelmed by the noise and
+              variability inherent in simply extracting a usable representation
+              of the data. Traditional dimensionality reduction techniques often
+              create unstable "insights"—a small parameter change can dissolve
+              the entire embedding. Thema manages this sensitivity as a feature,
+              not a bug. Our design embraces the variation from different
+              modeling choices, allowing us to produce and reason about a
+              distribution of data structures (graphs). This approach ensures we
+              capture the consistently real facets of the underlying data, which
+              we then condense and optimize for downstream tasks, like
+              accelerating coal retirement.
             </p>
             <h3 className="mb-1 mt-4 text-xl font-semibold text-black dark:text-white">
               How it behaves
             </h3>
             <ul className="list-disc space-y-1 pl-5">
-              <li>Build graphs/manifolds from your data.</li>
               <li>
-                Run parameter sweeps (neighbors, metrics, min_dist, etc.).
+                Build graphs that approximate a manifold structure over your
+                data.
               </li>
               <li>
-                Condense results into a representative graph — the structure
-                that keeps showing up.
+                Simplify the "multiverse" of parameter settings, optimizing
+                model selection for the downstream task of your choice.
+              </li>
+              <li>
+                Leverage graph algorithms to scalably extract insights from your
+                data.
               </li>
             </ul>
             <h3 className="mb-1 mt-4 text-xl font-semibold text-black dark:text-white">
@@ -193,8 +341,8 @@ export default function CoalPost() {
             </h3>
             <ul className="list-disc space-y-1 pl-5">
               <li>
-                No more “pick the pretty embedding.” You get a stable,
-                interpretable topology.
+                No more “pick the pretty embedding.” Confidently select a usable
+                representation for your analysis.
               </li>
               <li>
                 Reproducible by design; the result isn’t one lucky
@@ -203,15 +351,6 @@ export default function CoalPost() {
               <li>
                 Plays nicely with clustering, visualization, and
                 decision‑making.
-              </li>
-            </ul>
-            <h3 className="mb-1 mt-4 text-xl font-semibold text-black dark:text-white">
-              Do more with less drama
-            </h3>
-            <ul className="list-disc space-y-1 pl-5">
-              <li>Explore variants. Keep the consensus structure.</li>
-              <li>
-                Treat topology as a first‑class object — analyze, explain, act.
               </li>
             </ul>
           </div>
