@@ -232,6 +232,59 @@ const Footer = () => {
           </div>
           {/* <!-- Footer Top --> */}
 
+          {/* Affiliations strip */}
+          <div className="border-t border-stroke py-10 dark:border-strokedark">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: -20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="animate_top flex flex-col items-center gap-6"
+            >
+              <p className="text-sectiontitle uppercase tracking-[5px] text-black dark:text-white">
+                Affiliations
+              </p>
+
+              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+                <a
+                  href="https://skydeck.berkeley.edu/program/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Berkeley SkyDeck PAD-13"
+                  className="group flex h-[60px] items-center justify-center"
+                >
+                  <Image
+                    src="/images/logo/PAD-13_logo.svg"
+                    alt="Berkeley SkyDeck PAD-13"
+                    width={180}
+                    height={48}
+                    className="h-[2.3rem] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[2.875rem]"
+                  />
+                </a>
+
+                <a
+                  href="https://www.tum-venture-labs.de/labs/healthcare/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TUM Venture Labs Healthcare"
+                  className="group flex h-[60px] items-center justify-center"
+                >
+                  <Image
+                    src="/images/logo/TUM_Venture_labs_logo.svg"
+                    alt="TUM Venture Labs Healthcare"
+                    width={220}
+                    height={48}
+                    className="h-[60px] w-auto opacity-80 transition-opacity group-hover:opacity-100 md:h-[60px]"
+                  />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
           {/* <!-- Footer Bottom --> */}
           <div className="flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
             <motion.div
