@@ -33,7 +33,7 @@ const menuData: Menu[] = [
       },
       {
         id: 36,
-        title: "Academic Collaborations",
+        title: "Academia",
         newTab: false,
         path: "/academia",
       },
