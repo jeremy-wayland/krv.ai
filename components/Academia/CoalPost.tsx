@@ -2,6 +2,7 @@
 import { useState } from "react";
 import CoalNetworkGraph from "./CoalNetworkGraph";
 import Underline from "../Animations/UnderlineAnchor";
+import { colorForGroup } from "./groupColors";
 
 export default function CoalPost() {
   const [expanded, setExpanded] = useState(false);
@@ -169,44 +170,113 @@ export default function CoalPost() {
             <h2 className="mb-2 text-2xl font-semibold text-black dark:text-white">
               Retirement Groups — Quick Overview
             </h2>
-            <ul className="list-disc space-y-1 pl-5">
-              <li>
-                <span className="font-medium">Fuel Blend Plants:</span>{" "}
-                Regulatory non-compliance and clean energy targets.
+            <ul className="space-y-2 pl-0">
+              {/* 0 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(0) }}
+                />
+                <div>
+                  <span className="font-medium">Fuel Blend Plants:</span>{" "}
+                  Regulatory non-compliance and clean energy targets.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">
-                  Retrofitted but Vulnerable Plants:
-                </span>{" "}
-                Only partial retirements planned; economic unviability and
-                renewable competition.
+              {/* 1 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(1) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    Retrofitted but Vulnerable Plants:
+                  </span>{" "}
+                  Only partial retirements planned; economic unviability and
+                  renewable competition.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">Democratic Majority Plants:</span>{" "}
-                Political and regulatory pressure for clean energy transitions.
+              {/* 2 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(2) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    Democratic Majority Plants:
+                  </span>{" "}
+                  Political and regulatory pressure for clean energy
+                  transitions.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">High Health Impact Plants:</span>{" "}
-                Air-quality related public health concerns and environmental
-                regulations.
+              {/* 3 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(3) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    High Health Impact Plants:
+                  </span>{" "}
+                  Air-quality related public health concerns and environmental
+                  regulations.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">Expensive Plants:</span> High
-                operating costs and environmental retrofit requirements.
+              {/* 4 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(4) }}
+                />
+                <div>
+                  <span className="font-medium">Expensive Plants:</span> High
+                  operating costs and environmental retrofit requirements.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">Young Plants:</span> No planned
-                retirements.
+              {/* 5 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(5) }}
+                />
+                <div>
+                  <span className="font-medium">Young Plants:</span> No planned
+                  retirements.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">
-                  Plants in Anti-Coal Regions:
-                </span>{" "}
-                Political opposition and economic difficulties.
+              {/* 6 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(6) }}
+                />
+                <div>
+                  <span className="font-medium">
+                    Plants in Anti-Coal Regions:
+                  </span>{" "}
+                  Political opposition and economic difficulties.
+                </div>
               </li>
-              <li>
-                <span className="font-medium">Air Quality Offenders:</span> No
-                planned retirements.
+              {/* 7 */}
+              <li className="flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: colorForGroup(7) }}
+                />
+                <div>
+                  <span className="font-medium">Air Quality Offenders:</span> No
+                  planned retirements.
+                </div>
               </li>
             </ul>
           </div>
