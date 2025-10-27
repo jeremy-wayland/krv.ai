@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useScramble } from "use-scramble";
 const phrases = [
   "Posix for AI Integrations",
-  "Universal Protocol for AI Deployment",
+  "Convert Enterprise Data into AI-Ready Formats",
   "One Abstraction Layer for Every System",
 ];
 
