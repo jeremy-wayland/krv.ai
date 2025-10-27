@@ -17,40 +17,22 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <div className="space-y-4">
-                <p className="text-lg">
-                  One protocol layer that instantly tames enterprise data
-                  complexity.
+              <div className="space-y-3">
+                <p className="lead-text">
+                  <strong>One protocol layer for enterprise AI.</strong> <br />
+                  Deploy anywhere with no migrations. Plug into existing systems
+                  and spin up advanced ML/AI workflows in minutes.
                 </p>
 
-                <ul className="space-y-3 text-base">
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
-                    <span>
-                      Deploy AI anywhere—<b>no migrations, no headaches</b>. We
-                      connect directly to your existing systems and spin up
-                      advanced ML/AI workflows in minutes.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
-                    <span>
-                      Skip generic solutions. Krv is the{" "}
-                      <b> essential middleware </b>
-                      that lets you build and own custom, high-impact AI
-                      solutions—developed for and within your system.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></span>
-                    <span>
-                      Empower domain experts—<b>non-technical users</b> can
-                      directly build AI workflows using their
-                      <b> business knowledge</b>, ending in a production-ready
-                      APIs.
-                    </span>
-                  </li>
-                </ul>
+                <p className="lead-text">
+                  <strong>
+                    Own the stack. Build high‑impact, custom solutions.
+                  </strong>{" "}
+                  <br />
+                  Non‑technical experts compose workflows into production‑ready
+                  APIs. Built on production rails for orchestration, scaling,
+                  and security.
+                </p>
 
                 <div className="pt-2">
                   <em>Built by data engineers and PhDs.</em>

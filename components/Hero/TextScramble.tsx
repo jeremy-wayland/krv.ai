@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from "react";
 import { useScramble } from "use-scramble";
 const phrases = [
-  "Posix for AI Integrations",
-  "Convert Enterprise Data into AI-Ready Formats",
+  "Essential Middleware for Modern Tech Stacks",
+  "Seamlessly Connect Enterprise Data to AI",
+  "The Posix for AI Integrations",
   "One Abstraction Layer for Every System",
 ];
 
