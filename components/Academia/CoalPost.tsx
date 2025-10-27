@@ -4,6 +4,7 @@ import CoalNetworkGraph from "./CoalNetworkGraph";
 import ResourceCards from "@/components/Common/ResourceCards";
 import coalResources from "@/components/Academia/resources-CoalPost";
 import { colorForGroup } from "./groupColors";
+import Underline from "@/components/Animations/UnderlineAnchor";
 
 export default function CoalPost() {
   const [expanded, setExpanded] = useState(false);
@@ -49,8 +50,18 @@ export default function CoalPost() {
               </span>
             </h1>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              In collaboration with the UCSB Environmental Studies Department
-              and Bren School of Environmental Science and Management
+              In collaboration with the{" "}
+              <Underline href="https://es.ucsb.edu">
+                UCSB Environmental Studies Department
+              </Underline>
+              ,{" "}
+              <Underline>
+                Bren School of Environmental Science and Management
+              </Underline>{" "}
+              & the{" "}
+              <Underline href="https://www.spatialclimatesolutions.com">
+                UCSB Spatial Climate Solutions Lab
+              </Underline>
             </p>
             <div className="mt-3">
               <a

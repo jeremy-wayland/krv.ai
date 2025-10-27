@@ -507,6 +507,30 @@ export default function CoalNetworkGraph({
           </div>
         )}
 
+        {/* Info tooltip bottom-right */}
+        <div className="pointer-events-auto absolute bottom-3 right-3 z-10">
+          <div className="group relative">
+            <button
+              aria-label="Graph help"
+              className="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 bg-white/90 text-slate-700 shadow hover:bg-white dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200"
+            >
+              <span className="text-[13px] font-semibold">i</span>
+            </button>
+            <div
+              role="tooltip"
+              className="invisible absolute bottom-9 right-0 w-[min(320px,85vw)] translate-y-1 rounded-md border border-slate-200 bg-white p-3 text-xs text-slate-700 opacity-0 shadow-lg transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+            >
+              <p>
+                Click a node to see its plants and group details in the right sidebar.
+              </p>
+              <p className="mt-1">
+                Use the Group control (top‑right) to view a specific group or cycle through groups.
+              </p>
+              <p className="mt-1">Hover a node to highlight its neighbors.</p>
+            </div>
+          </div>
+        </div>
+
         {/* Collapsible Sidebar overlay inside frame */}
         {selected?.node && (
           <aside className="pointer-events-auto absolute right-0 top-0 z-10 flex h-full w-[380px] flex-col border-l border-slate-200 bg-white/90 p-3 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80">
