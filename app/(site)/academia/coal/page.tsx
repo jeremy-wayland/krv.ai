@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     url: "https://krv.ai/academia/coal",
     siteName: "Krv Analytics",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/UIs/OG-coalPreview.png",
+        width: 1200,
+        height: 630,
+        alt: "Accelerating US Coal Phaseout",
+      },
+    ],
     // Article-specific metadata
     publishedTime: "2025-09-23T00:00:00.000Z",
     authors: ["Sidney Gathrid", "Grace C. Wu", "Krv Analytics"],
@@ -39,6 +47,14 @@ export const metadata: Metadata = {
   // Canonical URL
   alternates: {
     canonical: "https://krv.ai/academia/coal",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Accelerating US Coal Phaseout: A Data-Driven Framework",
+    description:
+      "Nature Energy study: contextual vulnerabilities across 198 coal plants reveal targeted retirement strategies.",
+    images: ["/images/UIs/OG-coalPreview.png"],
   },
 
   // Robots
