@@ -36,7 +36,8 @@ const rawNews: NewsItem[] = [
     id: "2025-10-22-code-releases",
     date: "2025-10-22",
     title: "New releases of Thema and Retire",
-    summary: "The team released Thema v0.1.3 and Retire v0.1.1 for .",
+    summary:
+      "The team released Thema v0.1.3 and Retire v0.1.1—open-source tools that support research to accelerate the coal phaseout.",
     linkLabel: "View on GitHub",
     linkUrl: "https://github.com/Krv-Analytics/retire/releases/tag/v0.1.1",
     source: "GitHub",
