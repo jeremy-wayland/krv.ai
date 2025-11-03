@@ -2,6 +2,20 @@ import { NewsItem, sortNewsDesc } from "@/types/news";
 
 const rawNews: NewsItem[] = [
   {
+    id: "2025-10-30-futurity-americas-last-coal-power-plants",
+    date: "2025-10-30",
+    title:
+      "Futurity covers Nature Energy study on America's remaining coal-power plants",
+    summary:
+      "The article cover's a study on classifying U.S. coal-fired plants into typologies using Krv's THEMA framework.",
+    source: "Futurity",
+    linkUrl:
+      "https://www.futurity.org/americas-last-coal-power-plants-3303022/?utm_source=rss&utm_medium=rss&utm_campaign=americas-last-coal-power-plants-3303022",
+    linkLabel: "Read Article",
+    tags: ["press", "publication"],
+  },
+
+  {
     id: "2025-10-27-eurekalert-nature-energy",
     date: "2025-10-27",
     title:
