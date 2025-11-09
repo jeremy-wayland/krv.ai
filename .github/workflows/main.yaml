@@ -27,7 +27,7 @@ jobs:
   # ==========================================================
   cleanup:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    uses: Krv-Analytics/.github-private/.github/workflows/cleanup-reusable.yaml@main
+    uses: Krv-Analytics/.github-private/.github/workflows/cleanup-staging.yaml@main
     with:
       base_service_name: "compass-ui"
       region: "us-central1"
