@@ -1,4 +1,4 @@
-name: 🌐 Website CI/CD (GCP)
+name: 🌐 Krv Official Website CI/CD (GCP)
 
 on:
   push:
