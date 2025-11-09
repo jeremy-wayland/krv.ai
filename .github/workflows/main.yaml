@@ -13,11 +13,11 @@ permissions:
 
 jobs:
   # # ==========================================================
-  # # 🎭 Staging deploy for PR branches
+  # # 🎭 Staging Preview for PR branches
   # # ==========================================================
   # staging:
   #   if: github.event_name == 'pull_request' && github.event.action != 'closed'
-  #   uses: Krv-Analytics/.github-private/.github/workflows/staging-reusable.yaml@main
+  #   uses: Krv-Analytics/.github/.github/workflows/staging-reusable.yaml@main
   #   with:
   #     base_service_name: "krv-webbie"
   #     region: "us-central1"
@@ -31,7 +31,7 @@ jobs:
   # # ==========================================================
   # cleanup:
   #   if: github.event_name == 'pull_request' && github.event.action == 'closed'
-  #   uses: Krv-Analytics/.github-private/.github/workflows/cleanup-staging.yaml@main
+  #   uses: Krv-Analytics/.github/.github/workflows/cleanup-staging.yaml@main
   #   with:
   #     base_service_name: "krv-webbie"
   #     region: "us-central1"
