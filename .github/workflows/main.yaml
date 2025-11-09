@@ -27,7 +27,7 @@ jobs:
   #     ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
 
   # # ==========================================================
-  # # 🧹 Cleanup staging on PR close/merge
+  # # 🧹 Cleanup staging on PR close or merge
   # # ==========================================================
   # cleanup:
   #   if: github.event_name == 'pull_request' && github.event.action == 'closed'
