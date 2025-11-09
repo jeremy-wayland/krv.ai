@@ -7,6 +7,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review, closed]
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   # # ==========================================================
   # # 🎭 Staging deploy for PR branches
