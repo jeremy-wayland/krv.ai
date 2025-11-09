@@ -1,0 +1,51 @@
+name: 🌐 Website CI/CD (GCP)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, closed]
+
+jobs:
+  # ==========================================================
+  # 🎭 Staging deploy for PR branches
+  # ==========================================================
+  staging:
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    uses: Krv-Analytics/.github-private/.github/workflows/staging-reusable.yaml@main
+    with:
+      base_service_name: "compass-ui"
+      region: "us-central1"
+    secrets:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
+      ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
+
+  # ==========================================================
+  # 🧹 Cleanup staging on PR close/merge
+  # ==========================================================
+  cleanup:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    uses: Krv-Analytics/.github-private/.github/workflows/cleanup-reusable.yaml@main
+    with:
+      base_service_name: "compass-ui"
+      region: "us-central1"
+    secrets:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
+      ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
+
+  # ==========================================================
+  # ☁️ Production deploy (only on main)
+  # ==========================================================
+  deploy-prod:
+    if: github.ref == 'refs/heads/main'
+    uses: Krv-Analytics/.github-private/.github/workflows/deploy-reusable.yaml@main
+    with:
+      region: "us-central1"
+      service: "compass-ui"
+    secrets:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
+      ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
