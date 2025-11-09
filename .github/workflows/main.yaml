@@ -41,7 +41,7 @@ jobs:
   # ==========================================================
   deploy-prod:
     if: github.ref == 'refs/heads/main'
-    uses: Krv-Analytics/.github-private/.github/workflows/deploy-reusable.yaml@main
+    uses: Krv-Analytics/.github/.github/workflows/deploy-reusable.yaml@main
     with:
       region: "us-central1"
       service: "compass-ui"
