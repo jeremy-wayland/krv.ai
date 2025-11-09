@@ -19,7 +19,7 @@ jobs:
   #   if: github.event_name == 'pull_request' && github.event.action != 'closed'
   #   uses: Krv-Analytics/.github-private/.github/workflows/staging-reusable.yaml@main
   #   with:
-  #     base_service_name: "compass-ui"
+  #     base_service_name: "krv-webbie"
   #     region: "us-central1"
   #   secrets:
   #     GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
@@ -33,7 +33,7 @@ jobs:
   #   if: github.event_name == 'pull_request' && github.event.action == 'closed'
   #   uses: Krv-Analytics/.github-private/.github/workflows/cleanup-staging.yaml@main
   #   with:
-  #     base_service_name: "compass-ui"
+  #     base_service_name: "krv-webbie"
   #     region: "us-central1"
   #   secrets:
   #     GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
@@ -48,7 +48,7 @@ jobs:
     uses: Krv-Analytics/.github/.github/workflows/deploy-reusable.yaml@main
     with:
       region: "us-central1"
-      service: "compass-ui"
+      service: "krv-webbie-prod"
     secrets:
       GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
