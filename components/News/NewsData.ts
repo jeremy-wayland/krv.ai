@@ -2,6 +2,24 @@ import { NewsItem, sortNewsDesc } from "@/types/news";
 
 const rawNews: NewsItem[] = [
   {
+    id: "2025-11-15-nucleate-biohack-novartis-challenge",
+    date: "2025-11-15",
+    title: "First place in Novartis Challenge at Nucleate BioHack 2025",
+    summary:
+      "Jeremy and team won first place in the Novartis Challenge by developing a geometric deep learning pipeline for drug-target interaction prediction.",
+    source: "Nucleate Germany",
+    linkUrl: "https://www.biohack-munich.xyz/",
+    linkLabel: "Nucleate BioHack",
+    tags: [
+      "Hackathon",
+      "Drug Discovery",
+      "Graph Neural Networks",
+      "Novartis",
+      "NanoTemper",
+      "Spira Labs",
+    ],
+  },
+  {
     id: "2025-10-30-futurity-americas-last-coal-power-plants",
     date: "2025-10-30",
     title:
